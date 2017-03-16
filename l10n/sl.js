@@ -138,7 +138,7 @@ OC.L10N.register(
     "You added the password for %s (login name: %s)" : "Dodano je geslo za %s (prijavno ime: %s)",
     "You edited the password for %s (login name: %s)" : "Spremenjeno je geslo za %s (prijavno ime: %s)",
     "You shared your password for %s (login name: %s) with %s" : "Geslo za %s (prijavno ime: %s) je dodano v souporabo z %s.",
-    "%s has shared the password for %s (login name: %s) with you" : "Uporabnik %s vam je dal v souporabo geslo za %s (prijavno ime: %s).",
+    "%s has shared the password for %s (login name: %s) with you" : "Uporabnik %s vam je omogočil souporabo gesla za %s (prijavno ime: %s).",
     "You stopped sharing your password for %s (login name: %s)" : "Onemogočili ste souporabo gesla za %s (prijavo ime: %s)",
     "%s has stopped sharing the password for %s (login name: %s) with you" : "Uporabnik %s je z vami prenehal souporabljati geslo za %s (prijavno ime: %s).",
     "You moved the password for %s (login name: %s) to the trash" : "Geslo za %s (prijavno ime: %s) ste premaknili v smeti",
