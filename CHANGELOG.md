@@ -1,19 +1,19 @@
 ####20 - NOT YET RELEASED
 * Added possibility to **send emails to users** you've shared a password with
- * The email will not contain the password, but does contain the direct link to the Passwords app
- * The senders name, subject and body text of the email are written in the recipients language, even when you share it with multiple users that have set different languages
- * Theme name of your ownCloud/NextCloud instance is supported, so the senders name can be MyGreatCloud Passwords (e.g. if the recipients language is German, this will be MyGreatCloud Passwörter)
- * HTML body and plain body are both supported
- * Sending emails is not available for use with the API; this is intended
- * The button for sharing is only available when at least one user is selected
- * When a users stops a share, a notification mail can be sent
+  * The email will not contain the password, but does contain the direct link to the Passwords app
+  * The senders name, subject and body text of the email are written in the recipients language, even when you share it with multiple users that have set different languages
+  * Theme name of your ownCloud/NextCloud instance is supported, so the senders name can be MyGreatCloud Passwords (e.g. if the recipients language is German, this will be MyGreatCloud Passwörter)
+  * HTML body and plain body are both supported
+  * Sending emails is not available for use with the API; this is intended
+  * The button for sharing is only available when at least one user is selected
+  * When a users stops a share, a notification mail can be sent
 * Added full integration with **activity feed**
- * Actions like creating a new passwords, sharing and deleting existing passwords will be sent to the Activity app
- * On the Personal settings page, you can sign up for mail notifications about these events
+  * Actions like creating a new passwords, sharing and deleting existing passwords will be sent to the Activity app
+  * On the Personal settings page, you can sign up for mail notifications about these events
 * Added version checker for administrators
- * Since I don't support the ownCloud App Store due to their rediculous release and upload flow (which interferes with GitHub AND my privacy AND is perfectly improvable/fixable by the ownCloud developers) a version checker was added to the admin page
- * The check verifies the installed version with the latest official release and the latest master version and adds buttons and instructions when an update is available
- * The check is disabled by default, as it sends the server IP address to github.com and administrators should decide themselves whether they permit this (in other words: if you do use the App Store, ownCloud GmbH has your server info and configuration but they have no privacy statement)
+  * Since I don't support the ownCloud App Store due to their rediculous release and upload flow (which interferes with GitHub AND my privacy AND is perfectly improvable/fixable by the ownCloud developers) a version checker was added to the admin page
+  * The check verifies the installed version with the latest official release and the latest master version and adds buttons and instructions when an update is available
+  * The check is disabled by default, as it sends the server IP address to github.com and administrators should decide themselves whether they permit this (in other words: if you do use the App Store, ownCloud GmbH has your server info and configuration but they have no privacy statement)
 * Added posibility to reset a master password (admin page)
 * Added more picture sizes for website/company name
 * Added pictures to buttons on share dialog
@@ -35,16 +35,16 @@
 ####19 - Sept 15th, 2016
 * Support for ownCloud 9.1 and NextCloud 9 and 10 (now works on all versions of OC 8 and OC 9, and NC 9 and NC 10 too)
 * Added the possibility for a master password! Users can choose between their own **ownCloud password** (default after you update), a self chosen **master password** or **no extra password** at all.
- * Authentication is served over POST requests (safer than URL requests)
- * A timer (cookie) is available and can be set per user
- * A master password and the cookie timer will be hashed with a 512-bit SHA2-hash. This hash contains no retrievable information and is useless, even for database administrators. It will only be used to verify it with the hashed version of the user's input.
- * This is particularly handy when other users know your ownCloud password (for practical reasons).
- * Master passwords do not re-encrypt existing passwords, it is only used for entering the app.
- * The countdown timer will lock the app instead of log you off when it reaches zero and you use an extra authentication
- * Added 'Lock app' button as option for users who have set an extra authentication
+  * Authentication is served over POST requests (safer than URL requests)
+  * A timer (cookie) is available and can be set per user
+  * A master password and the cookie timer will be hashed with a 512-bit SHA2-hash. This hash contains no retrievable information and is useless, even for database administrators. It will only be used to verify it with the hashed version of the user's input.
+  * This is particularly handy when other users know your ownCloud password (for practical reasons).
+  * Master passwords do not re-encrypt existing passwords, it is only used for entering the app.
+  * The countdown timer will lock the app instead of log you off when it reaches zero and you use an extra authentication
+  * Added 'Lock app' button as option for users who have set an extra authentication
 * Full LDAP support
- * LDAP users can now share their passwords with other LDAP users and local users
- * Extra authentication using the ownCloud password is possible too 
+  * LDAP users can now share their passwords with other LDAP users and local users
+  * Extra authentication using the ownCloud password is possible too 
 * Added user option to change icon sizes. Default is now larger: 32px instead of 16px, but users can change this themselves to 16px, 24px or 32px.
 * Added support for different app locations. If you use `/owncloud/apps2/passwords` for an instance, this will now be supported too. Admins can change this in the admin settings of ownCloud.
 * Readded support for PostgreSQL (changed database format for BLOB-types to string format)
@@ -73,17 +73,17 @@
 
 ####18.0 - Apr 4th, 2016
 * **Added sharing!** Share all your passwords with others (you can trust)!
- * The users you can share with, is based on the admin settings (only from your own group, or all users, ...)
- * Icons indicate the number of users you've shared a password with
- * Popup shows avatars, ownCloud login names and display names
- * It uses a random share key (256-bit strong) that is created everytime a share is created. This key is saved to a new (third) database table, `oc_passwords_share`, and to the encrypted `properties` column of the password owner. When the keys match, the password will be decrypted on the receiving user's side.
- * Note: LDAP is not yet supported, but will be in v18.1.
+  * The users you can share with, is based on the admin settings (only from your own group, or all users, ...)
+  * Icons indicate the number of users you've shared a password with
+  * Popup shows avatars, ownCloud login names and display names
+  * It uses a random share key (256-bit strong) that is created everytime a share is created. This key is saved to a new (third) database table, `oc_passwords_share`, and to the encrypted `properties` column of the password owner. When the keys match, the password will be decrypted on the receiving user's side.
+  * Note: LDAP is not yet supported, but will be in v18.1.
 * **This app can now fully be controlled remotely!** This makes it technically possible to use ownCloud Passwords on Android, iPhones, remote servers, you name it. Other authors have already made browser plugins available for Firefox and Chrome. No strict need to use the website of ownCloud anymore, but it all works just as safe. 
- * Changed RESTful API to support GET, POST, DELETE, and PUT
- * Moved all calculation classes to server-side (translated JavaScript to PHP, which is all PHP 7 safe)
- * Wrote documentation for API use: [ownCloud Passwords | RESTful API](https://github.com/fcturner/passwords/wiki/ownCloud-Passwords-%7C-RESTful-API)
- * Firefox addon: [here](https://addons.mozilla.org/en-US/firefox/addon/firefox-owncloud-passwords) (thanks to [@eglia](https://github.com/eglia)) 
- * Chrome extension: [here](https://github.com/thefirstofthe300/ownCloud-Passwords) (thanks to [@thefirstofthe300](https://github.com/thefirstofthe300))
+  * Changed RESTful API to support GET, POST, DELETE, and PUT
+  * Moved all calculation classes to server-side (translated JavaScript to PHP, which is all PHP 7 safe)
+  * Wrote documentation for API use: [ownCloud Passwords | RESTful API](https://github.com/fcturner/passwords/wiki/ownCloud-Passwords-%7C-RESTful-API)
+  * Firefox addon: [here](https://addons.mozilla.org/en-US/firefox/addon/firefox-owncloud-passwords) (thanks to [@eglia](https://github.com/eglia)) 
+  * Chrome extension: [here](https://github.com/thefirstofthe300/ownCloud-Passwords) (thanks to [@thefirstofthe300](https://github.com/thefirstofthe300))
 * Created a gallery with screenshots: [ownCloud Passwords | Gallery (screenshots)](https://github.com/fcturner/passwords/wiki/ownCloud-Passwords-%7C-Gallery-(screenshots))
 * Allow tabs for input in notes field (so pressing Tab doesn't switch to another field, but instead inserts a tab)
 * Filtering a category or text now only searches active passwords, ignoring passwords in the trash bin
@@ -218,7 +218,7 @@
 
 ####8.0.10 - Aug 7, 2015
 * Added possibility to import passwords from KeePass, 1Password, LastPass, SplashID or every other source, as long as it was exported as CSV. You can set the source columns yourself. 
- * Note: This is **not** less safe than putting in passwords one by one. This is Javascript only, so reading a CSV is practically very similar to typing in new passwords yourself.
+  * Note: This is **not** less safe than putting in passwords one by one. This is Javascript only, so reading a CSV is practically very similar to typing in new passwords yourself.
 * Added possibility in Personal settings to hide the columns |  a-z  |  A-Z  |  0-9  |  !@#  |
 
 ####8.0.9 - Aug 3, 2015
