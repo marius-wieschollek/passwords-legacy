@@ -14,6 +14,7 @@
  * Since I don't support the ownCloud App Store due to their rediculous release and upload flow (which interferes with GitHub AND my privacy AND is perfectly improvable/fixable by the ownCloud developers) a version checker was added to the admin page
  * The check verifies the installed version with the latest official release and the latest master version and adds buttons and instructions when an update is available
  * The check is disabled by default, as it sends the server IP address to github.com and administrators should decide themselves whether they permit this (in other words: if you do use the App Store, ownCloud GmbH has your server info and configuration but they have no privacy statement)
+* Added posibility to reset a master password (admin page)
 * Added more picture sizes for website/company name
 * Added pictures to buttons on share dialog
 * Added check for overwriteprotocol in config.php (secure if it is 'https')
