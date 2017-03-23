@@ -1637,7 +1637,7 @@ function formatTable(update_only, rows) {
 				is_sharedby = false;
 			}
 
-			if (row.deleted || row.deleted == "true") {
+			if (row.deleted === true || row.deleted == "true") {
 				if (is_sharedby) {
 					var html_row = '<tr class="is_deleted is_sharedby" sharedby="' + row.user_id + '" ';
 				} else {
