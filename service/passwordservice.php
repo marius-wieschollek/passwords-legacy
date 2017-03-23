@@ -258,6 +258,22 @@ class PasswordService {
 								'<br><br>' .
 								$userlang->t('Login on %s to view your other passwords', '<a href="' . $fullurl . '" target="_blank">' . $instancename . ' ' . $appname . '</a>') . '.'
 							);
+						} elseif ($kind == 'masterpwreset') {
+							$message->setSubject($userlang->t('Your master password has been reset'));
+							$message->setPlainBody(
+								$userdisplayname .
+								',\n\n' .
+								$userlang->t('Your master password for %s has been reset. You can now login using your %s password and set a new master password within the %s app.', array($instancename . ' ' . $appname, $instancename, $appname)) .
+								'\n\n' .
+								$userlang->t('Click here to login on %s', $instancename . ' ' . $appname) . ': ' . $fullurl . '.'
+							);
+							$message->setHtmlBody(
+								$userdisplayname .
+								',<br><br>' .
+								$userlang->t('Your master password for %s has been reset. You can now login using your %s password and set a new master password within the %s app.', array($instancename . ' ' . $appname, $instancename, $appname)) .
+								'<br><br>' .
+								$userlang->t('Click here to login on %s', '<a href="' . $fullurl . '" target="_blank">' . $instancename . ' ' . $appname . '</a>') . '.'
+							);
 						}
 
 						$mailer->send($message);
