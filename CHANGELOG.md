@@ -24,6 +24,7 @@
 * Improved HTML escape function, based on `mustache.js`
 * Fix for user defined avatars not showing
 * Fix for deleted flag in PostgreSQL combined with Firefox, but changing the database type to 'real' booleans (rather than integers - 0 and 1)
+* Fix for trashbin not working well on newer installations of NextCloud
 * Fix for sharing using LDAP
 * Fix for sharing using PostgreSQL
 * Fix for category filter
