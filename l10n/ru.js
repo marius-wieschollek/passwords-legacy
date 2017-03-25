@@ -183,6 +183,7 @@ OC.L10N.register(
     "Allow users to download a backup as an unencrypted, plain text file" : "Разрешить пользователям скачивать резервную копию в виде незашифрованного текстового файла",
     "Disable browsers context menu" : "Запретить контекстное меню браузера",
     "This will make it harder for users to use the functions of the browsers context menu, but it may really be annoying to some users" : "Это затруднит вызов пользователями функций из контекстного меню браузера, но это может создать большие неудобства для некоторых пользователей",
+    "Reset" : "Сброс",
     "Website icons" : "Значки сайтов",
     "Allow website icons" : "Разрешить значки сайтов",
     "This will help users finding a website they are looking for in their list and it looks rather nice too, but it will send your IP address to another server" : "Это поможет пользователям находить нужные им сайты в своих списках, и при этом приятно выглядит, но это будет отправлять ваш адрес IP на чужие сервера",

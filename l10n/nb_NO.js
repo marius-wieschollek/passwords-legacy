@@ -183,6 +183,7 @@ OC.L10N.register(
     "Allow users to download a backup as an unencrypted, plain text file" : "Tillat brukere å laste ned en sikkerhetskopi som en ukryptert, ren tekstfil.",
     "Disable browsers context menu" : "Deaktiver nettleserens hurtigmeny",
     "This will make it harder for users to use the functions of the browsers context menu, but it may really be annoying to some users" : "Dette vil gjøre det vanskeligere for brukere å bruke funksjonene i nettleserens hurtigmeny, men det kan være irriterende for noen brukere",
+    "Reset" : "Tilbakestill",
     "Website icons" : "Webside-ikoner",
     "Allow website icons" : "Tillat webside-ikoner",
     "This will help users finding a website they are looking for in their list and it looks rather nice too, but it will send your IP address to another server" : "Dette vil hjelpe brukerne å finne en webside de ser etter i listen, og det ser pent ut også, men det vil sende IP-adressen til til en annen server",

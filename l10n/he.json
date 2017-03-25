@@ -181,6 +181,7 @@
     "Allow users to download a backup as an unencrypted, plain text file" : "מאפשר למשתמשים להוריד גיבוי כקובץ טקסט פשוט ולא מקודד",
     "Disable browsers context menu" : "מנטרל תפריט הקשר בדפדפנים",
     "This will make it harder for users to use the functions of the browsers context menu, but it may really be annoying to some users" : "זה יקשה על משתמשים להשתמש בפעולות של תפריטי הקשר בדפדפים, אבל זה יעצבן מאוד משתמשים אחדים",
+    "Reset" : "לאפס",
     "Website icons" : "סמלוני אתר",
     "Allow website icons" : "מאפשר סמלוני אתר",
     "This will help users finding a website they are looking for in their list and it looks rather nice too, but it will send your IP address to another server" : "זה יעזור למשתמשים למצוא אתר אותו הם מחפשים ברשימה וכן זה יראה יפה, אבל זה ישלח את כתובת ה- IP שלך לשרת אחר",

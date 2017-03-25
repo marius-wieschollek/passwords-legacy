@@ -146,6 +146,7 @@
     "Allow users to download a backup as an unencrypted, plain text file" : "Leyfa notendum að sækja öryggisafrit sem ódulritaða skrá með hreinum texta",
     "Disable browsers context menu" : "Gera samhengisvalmynd vafra óvirka",
     "This will make it harder for users to use the functions of the browsers context menu, but it may really be annoying to some users" : "Þetta gerir erfiðara fyrir notendur að nota aðgerðir í samhengisvalmynd vafra, og mun vera algerlega óþolandi fyrir suma notendur",
+    "Reset" : "Endurstilla",
     "Website icons" : "Táknmyndir vefsvæða",
     "Allow website icons" : "Leyfa táknmyndir vefsvæða",
     "This will help users finding a website they are looking for in their list and it looks rather nice too, but it will send your IP address to another server" : "Þetta mun hjálpa notendum að finna vefsvæði sem þeir leita að í listanum sínum auk þess að líta ansi vel út, en mun aftur á móti senda IP-vistfangið þitt yfir á annan þjón",

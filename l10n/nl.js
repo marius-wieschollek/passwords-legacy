@@ -183,6 +183,7 @@ OC.L10N.register(
     "Allow users to download a backup as an unencrypted, plain text file" : "Sta gebruikers toe een reservekopie te downloaden als een onversleuteld, platte tekstbestand.",
     "Disable browsers context menu" : "Schakel browsers contextmenu uit",
     "This will make it harder for users to use the functions of the browsers context menu, but it may really be annoying to some users" : "Dit zal het moeilijker maken voor gebruikers om de functies van het browsers contextmenu te gebruiken, maar het zou erg vervelend kunnen zijn voor sommige gebruikers",
+    "Reset" : "Reset",
     "Website icons" : "Website icoon",
     "Allow website icons" : "Sta website iconen toe",
     "This will help users finding a website they are looking for in their list and it looks rather nice too, but it will send your IP address to another server" : "Dit zal gebruikers helpen in het vinden van een website waar ze naar zoeken in hun lijst. Het ziet er ook mooi uit, het zal echter uw IP adres naar een andere server sturen.",

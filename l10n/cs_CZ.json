@@ -181,6 +181,7 @@
     "Allow users to download a backup as an unencrypted, plain text file" : "Povolit uživatelům stahovat zálohu v nešifrovaném, čistě textovém souboru ",
     "Disable browsers context menu" : "Vypnout kontextové menu prohlížeče",
     "This will make it harder for users to use the functions of the browsers context menu, but it may really be annoying to some users" : "Toto uživatelům ztíží použití kontextové nabídky prohlížeče, ale může být pro některé uživatele obtěžující",
+    "Reset" : "Reset",
     "Website icons" : "Ikony webové stránky",
     "Allow website icons" : "Povolit ikonu stránky",
     "This will help users finding a website they are looking for in their list and it looks rather nice too, but it will send your IP address to another server" : "Toto pomůže uživatelům najít stránku kterou hledají ve svém seznamu a bude to také vypadat lépe, ale vaše IP adresa tak bude odesílána na jiný server",

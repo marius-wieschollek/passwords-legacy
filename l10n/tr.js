@@ -133,6 +133,7 @@ OC.L10N.register(
     "Allow users to download a backup as an unencrypted, plain text file" : "Kullanıcıların yedeklerini şifrelenmemiş düz metin dosyası olarak indirmelerine izin ver",
     "Disable browsers context menu" : "Tarayıcı içerik menüsünü kapat",
     "This will make it harder for users to use the functions of the browsers context menu, but it may really be annoying to some users" : "Bu kullanıcıların tarayıcının içerik menüsününün fonksiyonlarını kullanmalarını zorlaştıracağından bazı kullanıcıları gereçketen rahatsız edebilir",
+    "Reset" : "Sıfırla",
     "Website icons" : "web sitesi simgeleri",
     "Allow website icons" : "Bütün web sitesi simgeleri",
     "This will help users finding a website they are looking for in their list and it looks rather nice too, but it will send your IP address to another server" : "Bu kullanıcıların listelerinde aradıkları web sayfasını bulmalarına yardım ettiğinden iyi gibi görünebilir ama IP adresinizi başka bir sunucuya gönderir",

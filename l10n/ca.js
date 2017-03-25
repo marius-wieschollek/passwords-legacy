@@ -183,6 +183,7 @@ OC.L10N.register(
     "Allow users to download a backup as an unencrypted, plain text file" : "Permetre als usuaris descarregar una còpia de seguretat en un fitxer de text sense xifrar",
     "Disable browsers context menu" : "Deshabilitar menú contextual del navegador",
     "This will make it harder for users to use the functions of the browsers context menu, but it may really be annoying to some users" : "Això farà més difícil utilitzar el menú contextual del navegador, però pot ser molest per a alguns usuaris",
+    "Reset" : "Estableix de nou",
     "Website icons" : "Icones de pàgines web",
     "Allow website icons" : "Permetre icones de pàgines web",
     "This will help users finding a website they are looking for in their list and it looks rather nice too, but it will send your IP address to another server" : "Això ajuda a trobar la contrasenya que es busca i millora l'aspecte visual, però enviarà la teva adreça IP a un altre servidor",
