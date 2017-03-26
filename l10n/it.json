@@ -157,6 +157,7 @@
     "A password is no longer shared with you" : "Una password non è più condivisa con te",
     "%s no longer shares the password for %s" : "%s non condivide più la password per %s",
     "Login on %s to view your other passwords" : "Accedi a %s per visualizzare le tue altre password",
+    "Click here to login on %s" : "Fai clic qui per accedere a %s",
     "Version" : "Versione",
     "Installed" : "Installato",
     "Check for new versions here (requires reload of this page)" : "Controlla qui la presenza di nuove versioni (richiede l'aggiornamento della pagina)",
