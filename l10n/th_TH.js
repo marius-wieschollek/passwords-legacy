@@ -161,6 +161,7 @@ OC.L10N.register(
     "%s no longer shares the password for %s" : "%s ไม่มีรหัสผ่านที่แชร์สำหรับ %s อีกต่อไป",
     "Login on %s to view your other passwords" : "เข้าสู่ระบบ %s เพื่อดูรหัสผ่านอื่นๆ ของคุณ",
     "Your master password has been reset" : "รีเซ็ตรหัสผ่านหลักของคุณแล้ว",
+    "Your master password for %s has been reset. You can now login using your %s password and set a new master password within the %s app." : "รหัสผ่านหลักสำหรับ %s ถูกรีเซ็ตแล้ว ขณะนี้คุณสามารถล็อกอินโดยใช้รหัสผ่าน %s และยังสามารถตั้งรหัสผ่านหลักใหม่ด้วยแอพฯ %s",
     "Click here to login on %s" : "คลิกที่นี่เพื่อเข้าสู่ระบบในชื่อ %s",
     "Version" : "รุ่น",
     "Installed" : "ติดตั้งแล้ว",
