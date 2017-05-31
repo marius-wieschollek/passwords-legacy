@@ -21,8 +21,7 @@
 	<repository type="git">https://github.com/fcturner/passwords.git</repository>
 	<ocsid>170480</ocsid>
 	<dependencies>
-		<owncloud min-version="8.0" max-version="11.0"/>
-		<nextcloud min-version="9.0" max-version="11.99"/>
+		<nextcloud min-version="12.0" max-version="12.99"/>
 		<database>sqlite</database>
 		<database>mysql</database>
 		<database>pgsql</database>
