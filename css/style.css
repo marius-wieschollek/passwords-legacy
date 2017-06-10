@@ -1494,4 +1494,13 @@ h2 {
 		height      : 30px;
 		line-height : 30px;
 	}
+
+	td:nth-child(1) .btn_commands_inline,
+	td:nth-child(2) .btn_commands_inline,
+	td:nth-child(3) .btn_commands_inline {
+		display  : block;
+		position : absolute;
+		top      : 0;
+		right    : 5px;
+	}
 }
