@@ -1,9 +1,4 @@
 /* make OC dialog functional, readable, just... useable. */
-div.oc-dialog {
-	left  : 15% !important;
-	width : 70% !important;
-}
-
 .oc-dialog {
 	z-index : 9999999999;
 }
