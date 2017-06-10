@@ -680,7 +680,7 @@ hr {
 	color            : #fff;
 	width            : 30%;
 	margin-left      : 35%;
-	margin-top       : 0px !important;
+	margin-top       : 0 !important;
 	font-weight      : bold;
 	padding          : 5px;
 	border-radius    : 5px;
@@ -689,13 +689,16 @@ hr {
 #lock_btn {
 	display          : none;
 	width            : 90%;
+	margin-top       : 5px;
 	margin-left      : 5%;
-	background-color : #a00;
-	color            : #fff;
+	background-color : #f7f7f7;
+	color            : #545454;
+	text-align       : center;
+	transition       : background-color 0.25s ease-in-out;
 }
 
 #lock_btn:hover {
-	background-color : #d00;
+	background-color : #ff8080;
 }
 
 #add_password_div {
