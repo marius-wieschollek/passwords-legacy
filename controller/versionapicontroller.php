@@ -26,6 +26,6 @@ class VersionApiController extends ApiController {
          */
         public function index() {
                 $AppInstance = new App();
-                return new DataResponse($AppInstance->getAppInfo("passwords")["version"]);
+                return new DataResponse($AppInstance->getAppInfo("passwords")["apiVersion"]);
         }
 }

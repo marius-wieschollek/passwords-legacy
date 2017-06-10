@@ -14,7 +14,6 @@
 			$auth_str = preg_replace('/owncloud/i', $theme->getName(), $l->t('ownCloud password'));
 			break;
 	}
-
 ?>
 <div id="auth_div">
 	<h2><?php p($l->t('Authenticate')); ?></h2>
@@ -27,5 +26,5 @@
 	</form>
 </div>
 <div id="auth_footer">
-	<p id="githubref"><a href="https://github.com/fcturner/passwords/" target="_blank"><?php p($instancename . ' ' . $passwordsname) ?></a> <small>v<?php p($passwordsversion) ?></small></p>
+	<p id="githubref"><a href="https://github.com/fcturner/passwords/" target="_blank"><?php p($instancename . ' ' . $passwordsname) ?></a> - <?php p($l->t('Version')); ?> <?php p($passwordsversion) ?></p>
 </div>
