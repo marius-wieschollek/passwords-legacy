@@ -11,7 +11,6 @@ instance-name="<?php p($theme->getName()) ?>"
 	<div id="CSVtableDIV">
 		<textarea id="CSVcontent"></textarea>
 		<textarea id="CSVcolumnCount"></textarea>
-		<p></h2>
 		<h3><?php p($l->t('Select options')); ?>:</h3>
 		<div id="CSVbuttons">
 			<button id="CSVheadersBtn"><?php p($l->t('File contains headers')); ?></button>
@@ -91,7 +90,6 @@ instance-name="<?php p($theme->getName()) ?>"
 	
 		<div id="app-settings-backup">
 			<h3><?php p($l->t('Download Backup')); ?></h3>
-			<p><?php p($l->t('Click to download a backup as an UNENCRYPTED plain text file')); ?>:</p>
 			<button id="backupDL" class="button icon-history nav-btn" type="button"><?php p($l->t("Download Backup")); ?></button>
 			<hr>
 		</div>
@@ -112,6 +110,5 @@ instance-name="<?php p($theme->getName()) ?>"
 			$passwordsversion = OC::$server->getConfig()->getAppValue('passwords', 'installed_version', '');
 		?>
 		<hr>
-		<p id="githubref"><a href="https://github.com/fcturner/passwords/" target="_blank"><?php p($instancename . ' ' . $passwordsname) ?></a> <small>v<?php p($passwordsversion) ?></small></p>
 	</div>
 </div>
