@@ -7,7 +7,7 @@ $checkVersion = OC::$server->getConfig()->getAppValue('passwords', 'check_versio
 if ($checkVersion) {
 	// get latest master version
 	$doc = new DOMDocument();
-	$doc->load('https://raw.githubusercontent.com/marius-wieschollek/passwords/master/appinfo/info.xml');
+	$doc->load('https://raw.githubusercontent.com/marius-wieschollek/passwords/stable/appinfo/info.xml');
 	$root = $doc->getElementsByTagName("info");
 	foreach($root as $element) {
 		$versions = $element->getElementsByTagName("version");

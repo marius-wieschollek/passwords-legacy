@@ -1,6 +1,6 @@
 # Passwords
 #### For NextCloud 12
-#### Please note that this fork of Fallon Turner ownCloud App simply focuses on NextCloud compatibility
+#### This is a fork of the Passwords App from Fallon Turner. If focuses on the compatibility with NextCloud as well as with the API of the original APP
 ##### 2015-2017, Fallon Turner <fcturner@users.noreply.github.com>
 ##### 2017, Marius Wieschollek <marius-wieschollek@users.noreply.github.com>
 Available in 25 languages: 
@@ -30,7 +30,6 @@ Available in 25 languages:
 <img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/issmall.gif" title="Icelandic" height="15" /> 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Galicia.svg/150px-Flag_of_Galicia.svg.png" title="Galician" height="15" />  
 ###### This app cannot be installed from within NextCloud, since this system demands repackaging of releases and kills the possibility to freely use GitHub master versions. (read more below under [Installation](https://github.com/marius-wieschollek/passwords#installation))
-[View this app on apps.owncloud.org.](https://apps.owncloud.com/content/show.php/Passwords?content=170480)
 
 ## Contents
 *  [Overview](https://github.com/marius-wieschollek/passwords#overview)
@@ -49,7 +48,7 @@ Available in 25 languages:
 
 ## Overview
 :camera: [More pictures in the gallery](https://github.com/marius-wieschollek/passwords/wiki/ownCloud-Passwords-%7C-Gallery-(screenshots)).
-![Overview of ownCloud Passwords](https://raw.githubusercontent.com/fcturner/passwords/master/img/screenshot3.PNG)
+![Overview of ownCloud Passwords](https://raw.githubusercontent.com/marius-wieschollek/passwords/stable/img/screenshot3.PNG)
 
 :camera: [More pictures in the gallery](https://github.com/marius-wieschollek/passwords/wiki/ownCloud-Passwords-%7C-Gallery-(screenshots)).
 
@@ -156,7 +155,7 @@ From v19 on: Login as admin on ownCloud/NextCloud and **go to the passwords sect
 
 *Note: on versions lower than v19, these commands still work.*
 
-![Updating the app](https://raw.githubusercontent.com/fcturner/passwords/master/img/versionchecker.png)
+![Updating the app](https://raw.githubusercontent.com/marius-wieschollek/passwords/stable/img/versionchecker.png)
 
 ### Initial installation
 Use one of the following options, login as admin on ownCloud/NextCloud and enable the app. The database tables `oc_passwords`, `oc_passwords_categories` and `oc_passwords_share` will be created automatically (assuming `_oc` as prefix).

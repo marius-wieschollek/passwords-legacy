@@ -29,7 +29,7 @@
 		<lib>mcrypt</lib>
 	</dependencies>
 	<documentation>
-	<user>https://github.com/marius-wieschollek/passwords/blob/master/README.md</user>
+	<user>https://github.com/marius-wieschollek/passwords/blob/stable/README.md</user>
 	<admin>https://github.com/marius-wieschollek/passwords/wiki</admin>
 	</documentation>
 </info>
