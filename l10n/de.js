@@ -199,7 +199,7 @@ OC.L10N.register(
     "Green" : "Grün",
     "ownCloud password" : "ownCloud-Passwort",
     "Authenticate" : "Authentifizieren",
-    "You need to authenticate using your password" : "Du musst dich zur Nutzung deines Passworts authentifizieren.",
+    "You need to authenticate using your password" : "Du musst dich zur Nutzung deines Passworts authentifizieren",
     "This can be changed in this app, after you have successfully authenticated" : "Dies kann in dieser App geändert werden, nachdem du dich authentifiziert hast",
     "ACCESS BLOCKED" : "Zugriff verweigert",
     "There is no secure, encrypted connection." : "Es besteht keine sichere und verschlüsselte Verbindung.",
