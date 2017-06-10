@@ -25,7 +25,7 @@ $(document).ready(function() {
 					// create cookie on 'pass'
 					setCookie();
 					// has auth cookie, so go for it
-					window.location = window.location;
+					location.reload();
 				} else if (result == 'fail') {
 					if ($('#auth_pass').val() == $('#auth_pass').val().toUpperCase()) {
 						$('#invalid_auth').text($('#invalid_auth').text() + t('passwords', ' Caps Lock might be on.'));	

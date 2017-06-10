@@ -989,7 +989,7 @@
 					// remove cookie
 					document.cookie = "oc_passwords_auth=" + SHA512($('head').attr('data-user')) + "; expires=Thu, 01 Jan 1970 00:00:00 UTC";
 					// and reload page, the auth will initiate
-					window.location = window.location;
+					location.reload();
 				});
 
 				// set settings
