@@ -29,12 +29,14 @@ if ($checkVersion) {
 }
 
 $app_path = OC::$server->getConfig()->getAppValue('passwords', 'app_path', OC::$SERVERROOT . '/apps');
+
 ?>
 <div class="section" id="passwords-admin">
 	<div 
 		id="password-settings" 
 		root-folder="<?php p(OC::$SERVERROOT) ?>"
-		app-path="<?php p($app_path) ?>" >
+		app-path="<?php p($app_path) ?>"
+		instance-name="<?php p($theme->getName()) ?>" >
 	</div>
 	<h2><?php p($l->t('Passwords')); ?></h2>
 
@@ -118,6 +120,11 @@ $app_path = OC::$server->getConfig()->getAppValue('passwords', 'app_path', OC::$
 		<p class="descr">
 			<em><?php p($l->t('This will make it harder for users to use the functions of the browsers context menu, but it may really be annoying to some users')); ?>.</em>
 		</p>
+
+		<label for="masterresetid"><?php p($l->t('Reset master password for user')); ?> (user ID):</label>
+		<input type="text" id="masterresetid">
+		<button id="masterreset" class="button"><?php p($l->t('Reset')); ?></button>
+
 	</div>
 
 	<div>

@@ -133,6 +133,7 @@ OC.L10N.register(
     "Allow users to download a backup as an unencrypted, plain text file" : "Tillåt användare att ladda ner en säkerhetskopia som en okrypterad, klartexts fil",
     "Disable browsers context menu" : "Inaktivera webbläsarens kontext meny",
     "This will make it harder for users to use the functions of the browsers context menu, but it may really be annoying to some users" : "Detta kommer göra det svårare för användare att använda funktioner från webbläsarens kontext meny, men det kan vara störande för vissa användare",
+    "Reset" : "Återställ",
     "Website icons" : "Webbside ikon",
     "Allow website icons" : "Tillåt webbside ikoner",
     "This will help users finding a website they are looking for in their list and it looks rather nice too, but it will send your IP address to another server" : "Detta kommer hjälpa användare att hitta en webbplats som dom letar efter i sin lista, och ser ganska bra ut också. Men det kommer skicka din IP adress till en annan server",

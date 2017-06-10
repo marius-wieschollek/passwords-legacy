@@ -1,5 +1,5 @@
 <ul>
-	<input id="lock_btn" class="button icon-lock nav-btn" type="button" value="<?php p(chunk_split(strtoupper($l->t("Lock app")), 1, ' ')); ?>">
+	<input id="lock_btn" class="button icon-lock nav-btn" type="button" value="<?php p($l->t("Lock app")); ?>">
 	<li id="list_active" class="with-counter active">
 		<a href="#"><?php p($l->t("Active passwords")); ?></a>
 		<div class="app-navigation-entry-utils">

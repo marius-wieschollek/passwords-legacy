@@ -181,6 +181,7 @@
     "Allow users to download a backup as an unencrypted, plain text file" : "Tillad brugere at downloade en ukrypteret, ren tekstfil.",
     "Disable browsers context menu" : "Deaktiver kontekstmenuen i browseren.",
     "This will make it harder for users to use the functions of the browsers context menu, but it may really be annoying to some users" : "Dette vil gøre det vanskeligere for brugere at anvende funktioner i browserens kontekstmenu, hvilket kan være stærkt irriterende for nogle brugere.",
+    "Reset" : "Nulstil",
     "Website icons" : "Webstedsikoner",
     "Allow website icons" : "Tillad webstedsikoner",
     "This will help users finding a website they are looking for in their list and it looks rather nice too, but it will send your IP address to another server" : "Dette vil hjælpe brugere med at finde et websted, som de søger efter i deres liste, og det ser tilmed ganske fint ud, men det vil sende din IP-adresse til en anden server.",

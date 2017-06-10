@@ -1,48 +1,50 @@
-####20 - NOT YET RELEASED
+#### 20 - NOT YET RELEASED
 * Added possibility to **send emails to users** you've shared a password with
- * The email will not contain the password, but does contain the direct link to the Passwords app
- * The senders name, subject and body text of the email are written in the recipients language, even when you share it with multiple users that have set different languages
- * Theme name of your ownCloud/NextCloud instance is supported, so the senders name can be MyGreatCloud Passwords (e.g. if the recipients language is German, this will be MyGreatCloud Passwörter)
- * HTML body and plain body are both supported
- * Sending emails is not available for use with the API; this is intended
- * The button for sharing is only available when at least one user is selected
- * When a users stops a share, a notification mail can be sent
+  * The email will not contain the password, but does contain the direct link to the Passwords app
+  * The senders name, subject and body text of the email are written in the recipients language, even when you share it with multiple users that have set different languages
+  * Theme name of your ownCloud/NextCloud instance is supported, so the senders name can be MyGreatCloud Passwords (e.g. if the recipients language is German, this will be MyGreatCloud Passwörter)
+  * HTML body and plain body are both supported
+  * Sending emails is not available for use with the API; this is intended
+  * The button for sharing is only available when at least one user is selected
+  * When a users stops a share, a notification mail can be sent
 * Added full integration with **activity feed**
- * Actions like creating a new passwords, sharing and deleting existing passwords will be sent to the Activity app
- * On the Personal settings page, you can sign up for mail notifications about these events
+  * Actions like creating a new passwords, sharing and deleting existing passwords will be sent to the Activity app
+  * On the Personal settings page, you can sign up for mail notifications about these events
 * Added version checker for administrators
- * Since I don't support the ownCloud App Store due to their rediculous release and upload flow (which interferes with GitHub AND my privacy AND is perfectly improvable/fixable by the ownCloud developers) a version checker was added to the admin page
- * The check verifies the installed version with the latest official release and the latest master version and adds buttons and instructions when an update is available
- * The check is disabled by default, as it sends the server IP address to github.com and administrators should decide themselves whether they permit this (in other words: if you do use the App Store, ownCloud GmbH has your server info and configuration but they have no privacy statement)
+  * Since I don't support the ownCloud App Store due to their rediculous release and upload flow (which interferes with GitHub AND my privacy AND is perfectly improvable/fixable by the ownCloud developers) a version checker was added to the admin page
+  * The check verifies the installed version with the latest official release and the latest master version and adds buttons and instructions when an update is available
+  * The check is disabled by default, as it sends the server IP address to github.com and administrators should decide themselves whether they permit this (in other words: if you do use the App Store, ownCloud GmbH has your server info and configuration but they have no privacy statement)
+* Added possibility to reset a master password (admin page)
 * Added more picture sizes for website/company name
 * Added pictures to buttons on share dialog
 * Added check for overwriteprotocol in config.php (secure if it is 'https')
 * Temporary fix for use with the `user_saml` authentication: the extra ownCloud/NextCloud authentication doesn't work and will be blocked. A notice will be displayed on the admin page.
-* Renamed script.js to passwords.js to make debugging more transparant and to comply with ownCloud and NextCloud standards
+* Renamed `script.js` to `passwords.js` to make debugging more transparant and to comply with ownCloud and NextCloud standards
 * Fix for records with user names in API, with ID = 0
 * Fix for NextCloud 11
 * Improved HTML escape function, based on `mustache.js`
 * Fix for user defined avatars not showing
 * Fix for deleted flag in PostgreSQL combined with Firefox, but changing the database type to 'real' booleans (rather than integers - 0 and 1)
+* Fix for trashbin not working well on newer installations of NextCloud
 * Fix for sharing using LDAP
 * Fix for sharing using PostgreSQL
 * Fix for category filter
 * Fix for `Undefined offset` in passwordservice.php
 * Small design fix for double horizontal break lines on personal page when icons are disabled
 
-####19 - Sept 15th, 2016
+#### 19 - Sept 15th, 2016
 * Support for ownCloud 9.1 and NextCloud 9 and 10 (now works on all versions of OC 8 and OC 9, and NC 9 and NC 10 too)
 * Added the possibility for a master password! Users can choose between their own **ownCloud password** (default after you update), a self chosen **master password** or **no extra password** at all.
- * Authentication is served over POST requests (safer than URL requests)
- * A timer (cookie) is available and can be set per user
- * A master password and the cookie timer will be hashed with a 512-bit SHA2-hash. This hash contains no retrievable information and is useless, even for database administrators. It will only be used to verify it with the hashed version of the user's input.
- * This is particularly handy when other users know your ownCloud password (for practical reasons).
- * Master passwords do not re-encrypt existing passwords, it is only used for entering the app.
- * The countdown timer will lock the app instead of log you off when it reaches zero and you use an extra authentication
- * Added 'Lock app' button as option for users who have set an extra authentication
+  * Authentication is served over POST requests (safer than URL requests)
+  * A timer (cookie) is available and can be set per user
+  * A master password and the cookie timer will be hashed with a 512-bit SHA2-hash. This hash contains no retrievable information and is useless, even for database administrators. It will only be used to verify it with the hashed version of the user's input.
+  * This is particularly handy when other users know your ownCloud password (for practical reasons).
+  * Master passwords do not re-encrypt existing passwords, it is only used for entering the app.
+  * The countdown timer will lock the app instead of log you off when it reaches zero and you use an extra authentication
+  * Added 'Lock app' button as option for users who have set an extra authentication
 * Full LDAP support
- * LDAP users can now share their passwords with other LDAP users and local users
- * Extra authentication using the ownCloud password is possible too 
+  * LDAP users can now share their passwords with other LDAP users and local users
+  * Extra authentication using the ownCloud password is possible too 
 * Added user option to change icon sizes. Default is now larger: 32px instead of 16px, but users can change this themselves to 16px, 24px or 32px.
 * Added support for different app locations. If you use `/owncloud/apps2/passwords` for an instance, this will now be supported too. Admins can change this in the admin settings of ownCloud.
 * Readded support for PostgreSQL (changed database format for BLOB-types to string format)
@@ -69,19 +71,19 @@
 * Fix for many small CSS bugs
 * Fixed ownCloud dialogs with own CSS so they actually work and the buttons are always in sight
 
-####18.0 - Apr 4th, 2016
+#### 18.0 - Apr 4th, 2016
 * **Added sharing!** Share all your passwords with others (you can trust)!
- * The users you can share with, is based on the admin settings (only from your own group, or all users, ...)
- * Icons indicate the number of users you've shared a password with
- * Popup shows avatars, ownCloud login names and display names
- * It uses a random share key (256-bit strong) that is created everytime a share is created. This key is saved to a new (third) database table, `oc_passwords_share`, and to the encrypted `properties` column of the password owner. When the keys match, the password will be decrypted on the receiving user's side.
- * Note: LDAP is not yet supported, but will be in v18.1.
+  * The users you can share with, is based on the admin settings (only from your own group, or all users, ...)
+  * Icons indicate the number of users you've shared a password with
+  * Popup shows avatars, ownCloud login names and display names
+  * It uses a random share key (256-bit strong) that is created everytime a share is created. This key is saved to a new (third) database table, `oc_passwords_share`, and to the encrypted `properties` column of the password owner. When the keys match, the password will be decrypted on the receiving user's side.
+  * Note: LDAP is not yet supported, but will be in v18.1.
 * **This app can now fully be controlled remotely!** This makes it technically possible to use ownCloud Passwords on Android, iPhones, remote servers, you name it. Other authors have already made browser plugins available for Firefox and Chrome. No strict need to use the website of ownCloud anymore, but it all works just as safe. 
- * Changed RESTful API to support GET, POST, DELETE, and PUT
- * Moved all calculation classes to server-side (translated JavaScript to PHP, which is all PHP 7 safe)
- * Wrote documentation for API use: [ownCloud Passwords | RESTful API](https://github.com/fcturner/passwords/wiki/ownCloud-Passwords-%7C-RESTful-API)
- * Firefox addon: [here](https://addons.mozilla.org/en-US/firefox/addon/firefox-owncloud-passwords) (thanks to [@eglia](https://github.com/eglia)) 
- * Chrome extension: [here](https://github.com/thefirstofthe300/ownCloud-Passwords) (thanks to [@thefirstofthe300](https://github.com/thefirstofthe300))
+  * Changed RESTful API to support GET, POST, DELETE, and PUT
+  * Moved all calculation classes to server-side (translated JavaScript to PHP, which is all PHP 7 safe)
+  * Wrote documentation for API use: [ownCloud Passwords | RESTful API](https://github.com/fcturner/passwords/wiki/ownCloud-Passwords-%7C-RESTful-API)
+  * Firefox addon: [here](https://addons.mozilla.org/en-US/firefox/addon/firefox-owncloud-passwords) (thanks to [@eglia](https://github.com/eglia)) 
+  * Chrome extension: [here](https://github.com/thefirstofthe300/ownCloud-Passwords) (thanks to [@thefirstofthe300](https://github.com/thefirstofthe300))
 * Created a gallery with screenshots: [ownCloud Passwords | Gallery (screenshots)](https://github.com/fcturner/passwords/wiki/ownCloud-Passwords-%7C-Gallery-(screenshots))
 * Allow tabs for input in notes field (so pressing Tab doesn't switch to another field, but instead inserts a tab)
 * Filtering a category or text now only searches active passwords, ignoring passwords in the trash bin
@@ -107,11 +109,11 @@
 * Fix for select boxes after deleting a category
 * Fix for SQLite when database type is not defined in config/config.php
 
-####17.2 - Mar 12, 2016
+#### 17.2 - Mar 12, 2016
 * Fix for saving and updating a password on PostgreSQL backends
 * **If you don't use PostgreSQL (but MySQL or SQLite3 instead), you don't need this update**
 
-####17.1 - Mar 10, 2016
+#### 17.1 - Mar 10, 2016
 * Support for ownCloud 9.0 - this app now works with all versions of OC8 and OC9
 * Support for Firefox! [Andreas Egli](https://github.com/eglia) created a browser plugin for Firefox, which works with **Firefox 30.0 and later** (includes Android too): https://addons.mozilla.org/en-US/firefox/addon/firefox-owncloud-passwords/?src=userprofile
 * Added automated Transifex translations, by so introducing support for Albanian, Czech, British English, Hebrew, Icelandic, Norwegian and Portuguese (Brazil)
@@ -121,7 +123,7 @@
 * Fix for notes containing tabs
 * Fix for update process where new database tables weren't created
 
-####17 - Feb 24, 2016
+#### 17 - Feb 24, 2016
 * Added coloured categories. The amazing colour picker was made by [bgrins](https://bgrins.github.io/spectrum/).
 * Added filter for categories
 * Added category-specific popup
@@ -145,13 +147,13 @@
 * As ownCloud moves towards PHP 7: all my classes are PHP 7 safe
 * The next release (v18, expected April/May 2016) will contain sharing.
  
-####16.2 - Nov 21, 2015
+#### 16.2 - Nov 21, 2015
 * Now -did- fixed the bug for ownCloud 8.2 and higher
  
-####16.1 - Nov 21, 2015
+#### 16.1 - Nov 21, 2015
 * Fixed a bug for ownCloud 8.2 and higher
 
-####16 - Nov 21, 2015
+#### 16 - Nov 21, 2015
 * Added a countdown timer, which can be set by users. When the timer reaches 0, the user will be logged off (will show a message first). Valid values are 10-3599 seconds. The countdown timer resets on activity in the passwords app. When a timer is set, the user will be logged off too when the session cookie ends (if set by admin in config.php, will else be 60 seconds and not the default 15 days).
 * Added a sidebar with info about the password
 * Added a progress bar for importing passwords
@@ -168,7 +170,7 @@
 * Fix for (multiline) notes sometimes not being imported (#85)
 * Updated language files for English, Spanish, Dutch. Want to do an update for your own language? Look at the changes at [TRANSLATION.js](https://github.com/fcturner/passwords/commit/7f9428bac14fbfb8f866eff59d7b0efa1899967d)
 
-####15 - Oct 10, 2015
+#### 15 - Oct 10, 2015
 * Changed version numbering: 8.0.15 is replaced by 15, since future release may support more versions than OC8 only, and it suggested an ownCloud version more than an app version
 * Added new CSV import screen, with live preview
 * Added Italian language support
@@ -176,7 +178,7 @@
 * Fix for editing values containing `<` or `>`
 * Language update? Look at [TRANSLATION.js](TRANSLATION.js)
 
-####8.0.14 - Sep 28, 2015
+#### 8.0.14 - Sep 28, 2015
 * Added button in trash to permanently delete all passwords in trash bin
 * Auto-select on hover of passwords and usernames, with notification text to copy them with Ctrl+C or Cmd+C (detects system automatically). This is disabled for Android and iOS (of course)
 * Renamed *Creation date* to *Last changed*
@@ -185,7 +187,7 @@
 * Fix for CSV files containing a file extension in uppercase
 * Fix for height of popup title
 
-####8.0.13 - Sep 20, 2015
+#### 8.0.13 - Sep 20, 2015
 * Added search icon in search bar, saving another non-whitespaced line on navigation pane
 * Added auto-save in settings, both admin and personal (no more button clicking)
 * Totally rewrote (and fixed) the import function (for CSV files), with added error description for every possible error
@@ -194,7 +196,7 @@
 * Fix for icon not showing on empty trash bin
 * CSS fix for button texts
 
-####8.0.12 - Sep 15, 2015
+#### 8.0.12 - Sep 15, 2015
 * Added trash bin: deleted password are now moved to the trash bin, so they can be reverted or permanently deleted (this triggers the ownCloud update screen, since a mandatory database edit to the passwords table will be made)
 * Added option to save old values to the trash bin when editing a website, username or password, so you can look them up when needed
 * Edited strength algorithm. Now emphasizes length better by adding the rounded value of n<sub></sub><sup>x</sup> / 10<sup>x + 1</sup> to the calculated strength, where `n` stands for the amount of characters (i.e. length) and `x` is the power. By using `x = 6`, this gives a more accurate value when passwords are longer than +/- 15 characters and grows exponentially.
@@ -209,33 +211,33 @@
 * Small other bugfixes
 * Add you own language! Strings all sorted out here: [TRANSLATION.js](TRANSLATION.js).
 
-####8.0.11 - Aug 11, 2015
+#### 8.0.11 - Aug 11, 2015
 * A new way of editing values with an interactive popup. This will let you use the password generator and is a more easy way of editing.
 * Edited the backup function to make it an export function. These export files are fully compatible with KeePass, 1Password, LastPass and many other password services. Besides, Microsoft Excel can open the exported files natively as well.
 * Small bugfixes
 
-####8.0.10 - Aug 7, 2015
+#### 8.0.10 - Aug 7, 2015
 * Added possibility to import passwords from KeePass, 1Password, LastPass, SplashID or every other source, as long as it was exported as CSV. You can set the source columns yourself. 
- * Note: This is **not** less safe than putting in passwords one by one. This is Javascript only, so reading a CSV is practically very similar to typing in new passwords yourself.
+  * Note: This is **not** less safe than putting in passwords one by one. This is Javascript only, so reading a CSV is practically very similar to typing in new passwords yourself.
 * Added possibility in Personal settings to hide the columns |  a-z  |  A-Z  |  0-9  |  !@#  |
 
-####8.0.9 - Aug 3, 2015
+#### 8.0.9 - Aug 3, 2015
 * Bugfix for Firefox: now clicking hidden values and the pencil actually works (`event` was not defined in JS)
 * CSS fix: line-height doesn't change anymore when hovering a hidden password
 
-####8.0.8 - Aug 1, 2015
+#### 8.0.8 - Aug 1, 2015
 * Bugfix: some variables were undefined, leading to errors in log
 * Bugfix: hidden values now editable
 * Hidden values are now viewable on mouse hover
 
-####8.0.7 - July 30, 2015
+#### 8.0.7 - July 30, 2015
 * Added possibility to add notes to a password. These notes are encrypted just as strong as the passwords. 
 * Added possibility to edit every field (website, full address, username, password and notes). Hover over a value and click on the pencil icon to change a value. 
 * Added new icons for the form to add new passwords 
 * No more page refreshing after creating, deleting (or editing) a row or value. All edits are done directly to the loaded table, so the page doesn't need to be refreshed.
 * Other minor fixes
 
-####8.0.6 - July 26, 2015
+#### 8.0.6 - July 26, 2015
 
 * Thanks to all contributors on GitHub, this is a rather big update. So thanks, you all!
   * Downloadable backup
@@ -256,15 +258,15 @@
 * Minor bug fixes and code cleaning
 * *NOTE: this version works on 8.0.** *and 8.1.**
 
-####8.0.5 - July 8, 2015
+#### 8.0.5 - July 8, 2015
 * Compatibility with ownCloud 8.1 (this release however works with 8.0 too!)
 
-####8.0.4 - July 3, 2015
+#### 8.0.4 - July 3, 2015
 * Added German translation
 * Completed Spanish translation
 * Moved search field to navigation page, so this will stay visible when scrolling in a long list
 * Mask passwords (click to view them). This is CSS-only for now, to prevent simple screenshot-theft of passwords. Will be JS-coded later, so passwords will actually load and be decrypted when '*****' is clicked
 * Bug fixes (alignment of table heads, minor other things)
 
-####8.0.3 - June 27, 2015
+#### 8.0.3 - June 27, 2015
 * Initial release, tested on ownCloud Server 8.0.*

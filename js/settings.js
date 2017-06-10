@@ -76,7 +76,6 @@ $(document).ready(function() {
 				$('.msg-passwords').text(t('passwords', 'Error while saving field') + ' ' + key + '!');
 			});
 		},
-
 		setAdminKey: function(key, value) {
 			var request = $.ajax({
 				url: this._baseUrl + '/' + key + '/' + value + '/admin1/admin2',
@@ -100,6 +99,41 @@ $(document).ready(function() {
 		},
 		getAll: function() {
 			return this._settings;
+		},
+		sendmail: function(kind, website, sharewith, domain, fullurl, instancename) {
+			var sharewithArr = [];
+			if ($.isArray(sharewith)) {
+				sharewithArr = sharewith;
+			} else if (!sharewith) {
+				sharewithArr = "";
+			} else {
+				sharewithArr = sharewith.split(', ');
+			}
+			var result = false;
+			var request = $.ajax({
+				url: generateUrl('/mail'),
+				data: {
+					'kind' : kind,
+					'website' : website,
+					'sharewith' : sharewithArr,
+					'domain' : domain,
+					'fullurl' : fullurl,
+					'instancename' : instancename
+				},
+				method: 'POST',
+				async: false
+			});
+			
+			request.done(function(msg) {
+				// will be true or false;
+				result = msg;
+			});
+ 
+			request.fail(function( jqXHR, textStatus ) {
+				//alert( "Error while authenticating: " + textStatus );
+			});
+			
+			return result;
 		}
 	};
 
@@ -183,6 +217,14 @@ $(document).ready(function() {
 		}
 	});
 
+	$('#masterreset').click(function() {
+		var user = $('#masterresetid').val();
+		settings.setAdminKey('resetmaster', user);
+		$('#masterresetid').val('');
+		settings.sendmail('masterpwreset', '', user, URLtoDomain(window.location.href), 'http://' + URLtoDomain(window.location.href), $('#password-settings').attr('instance-name'));
+		OCdialogs.info(t('passwords', "The master passwords for user %s has been reset. If you've set up email, this user has been emailed about this too.").replace('%s', user), t('passwords', 'Master password'), function() { return false; }, true);
+		return true;
+	});
 
 // PERSONAL SETTINGS
 	
@@ -346,4 +388,25 @@ function updatePreview(size, service) {
 			'<td><img style="width:' + size + 'px;height:' + size + 'px;" src="https://www.google.com/s2/favicons?domain=owncloud.org">owncloud.org</td>' +
 			'<td><img style="width:' + size + 'px;height:' + size + 'px;" src="https://www.google.com/s2/favicons?domain=nextcloud.com">nextcloud.com</td>';
 	return tablerow;
+}
+function URLtoDomain(website) {
+
+	var domain;
+	// remove protocol (http, ftp, etc.) and get domain
+	if (website.indexOf("://") > -1) {
+		domain = website.split('/')[2];
+	}
+	else {
+		domain = website.split('/')[0];
+	}
+
+	// remove port number
+	domain = domain.split(':')[0];
+
+	// remove unwanted wwww. for sorting purposes
+	if (domain.substr(0, 4) == "www.") {
+		domain = domain.substr(4, domain.length - 4);
+	};
+
+	return domain;
 }

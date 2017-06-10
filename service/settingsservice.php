@@ -67,8 +67,17 @@ class SettingsService {
 	 *
 	 * @param $setting
 	 * @param $value
+	 * @param $admin1
+	 * @param $admin2
+	 * @return bool
 	 */
 	public function setadmin($setting, $value, $admin1, $admin2) {
-		return $this->settings->setAppValue($this->appName, $setting, $value);
+		if ($setting == 'resetmaster') {
+			$resetMaster = $this->settings->setUserValue($value, $this->appName, 'master_password', '0');
+			$resetAuthtype = $this->settings->setUserValue($value, $this->appName, 'extra_auth_type', 'owncloud');
+			return ($resetMaster && $resetAuthtype);
+		} else {
+			return $this->settings->setAppValue($this->appName, $setting, $value);
+		}
 	}
 }
