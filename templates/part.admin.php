@@ -8,24 +8,7 @@ if ($checkVersion) {
 	// get latest master version
 	$doc = new DOMDocument();
 	$doc->load('https://raw.githubusercontent.com/marius-wieschollek/passwords/stable/appinfo/info.xml');
-	$root = $doc->getElementsByTagName("info");
-	foreach($root as $element) {
-		$versions = $element->getElementsByTagName("version");
-		$version = $versions->item(0)->nodeValue;
-	}
-	$githubVersion = $version;
-
-	// get latest release
-	$url = 'https://github.com/marius-wieschollek/passwords/releases/latest';
-	$headers = get_headers($url);
-	$headers = array_reverse($headers);
-	foreach($headers as $header) {
-		if (stripos($header,'Location:') === 0) {
-			$url = trim(substr($header, strlen('Location:')));
-			break;
-		}
-	}
-	$latestRelease = str_replace('https://github.com/marius-wieschollek/passwords/releases/tag/', '', $url);
+	$githubVersion = $doc->getElementsByTagName("info")->item(0)->getElementsByTagName("version")->item(0)->nodeValue;
 }
 
 $app_path = OC::$server->getConfig()->getAppValue('passwords', 'app_path', OC::$SERVERROOT . '/apps');
@@ -44,24 +27,17 @@ $app_path = OC::$server->getConfig()->getAppValue('passwords', 'app_path', OC::$
 		<h3><?php p($l->t('Version')); ?></h3>
 		
 		<p><?php p($l->t('Installed') . ': v' . $thisVersion); ?></p>
-		<input class="checkbox" type="checkbox" id="check_version">
-		<label for="check_version"><?php p($l->t('Check for new versions here (requires reload of this page)')); ?></label>
-		<p class="descr">
-			<em><?php print_unescaped($l->t('This will send your IP address to %s', '<a class="linkDDG" href="https://github.com/marius-wieschollek/passwords" target="_blank">github.com</a>')); ?>.</em>
-		</p>
 		
 		<?php
 		if ($checkVersion) {
 			if (version_compare($thisVersion, $githubVersion) == -1) { ?>
-				<p><?php p($l->t('A new master version is available! This might however be a beta version.')); ?></p>
-				<ul>
-					<li>
-						<strong><?php p($l->t('Available') . ': v' . $githubVersion); ?></strong> 
-						<a href="https://github.com/marius-wieschollek/passwords/archive/master.zip" class="button"><?php p($l->t('Download %s', 'ZIP')); ?></a>
-						<a href="https://github.com/marius-wieschollek/passwords/archive/master.tar.gz" class="button"><?php p($l->t('Download %s', 'TAR')); ?></a>
-					</li>
-					<li><?php p($l->t('Latest official release') . ': v' . $latestRelease); ?></li>
-				</ul>
+				<p>
+				<strong><?php p($l->t('Available') . ': v' . $githubVersion); ?></strong>
+				</p>
+				<br>
+				<a href="https://github.com/marius-wieschollek/passwords/archive/master.zip" class="button"><?php p($l->t('Download %s', 'ZIP')); ?></a>
+				<a href="https://github.com/marius-wieschollek/passwords/archive/master.tar.gz" class="button"><?php p($l->t('Download %s', 'TAR')); ?></a>
+				<br>
 				<br>
 				<a href="https://github.com/marius-wieschollek/passwords/blob/master/CHANGELOG.md" class="button" target="_blank"><?php p($l->t('List of changes since %s', 'v' . $thisVersion)); ?></a>
 				<a href="https://github.com/marius-wieschollek/passwords/releases" class="button" target="_blank"><?php p($l->t('View all releases')); ?></a>
@@ -73,10 +49,20 @@ $app_path = OC::$server->getConfig()->getAppValue('passwords', 'app_path', OC::$
 				<p class="gitcode">sudo git clone https://github.com/marius-wieschollek/passwords.git <?php p($app_path); ?>/passwords</p>
 				<p class="gitcode">sudo -u <?php p(posix_getpwuid(fileowner(OC::$SERVERROOT . '/config/config.php'))['name']) ?> php <?php p(OC::$SERVERROOT); ?>/occ upgrade</p>
 			<?php } else { ?>
-				<p><?php p($l->t('The latest version is already installed') . ': v' . $thisVersion . '.'); ?></p>
-				<p><?php p($l->t('Latest official release') . ': v' . $latestRelease . '.'); ?></p>
+				<p><?php p($l->t('The latest version is already installed')); ?></p>
+
+				<input class="checkbox" type="checkbox" id="check_version">
+				<label for="check_version"><?php p($l->t('Check for new versions here (requires reload of this page)')); ?></label>
+
 			<?php } ?>
-		<?php } ?>
+		<?php } else {
+			?>
+
+			<input class="checkbox" type="checkbox" id="check_version">
+			<label for="check_version"><?php p($l->t('Check for new versions here (requires reload of this page)')); ?></label>
+
+			<?php
+		} ?>
 	</div>
 	
 	<?php

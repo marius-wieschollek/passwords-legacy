@@ -162,7 +162,7 @@
     "Your master password for %s has been reset. You can now login using your %s password and set a new master password within the %s app." : "Dein Master-Passwort für %s wurde zurück gesetzt. Du kannst dich jetzt mit deinem %s - Passwort anmelden und innerhalb der %s - App ein neues Master-Passwort eingeben.",
     "Click here to login on %s" : "Hier klicken, zum Anmelden auf %s",
     "Version" : "Version",
-    "Installed" : "installiert",
+    "Installed" : "Installierte Version",
     "Check for new versions here (requires reload of this page)" : "Auf neue Versionen hier prüfen (erfordert das Neuladen dieser Seite)",
     "This will send your IP address to %s" : "Dies sendet deine IP-Adresse an %s",
     "A new master version is available! This might however be a beta version." : "Eine neue Hauptversion ist verfügbar! Dies könnte jedoch eine Beta-Version sein.",

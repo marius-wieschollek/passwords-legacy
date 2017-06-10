@@ -170,6 +170,9 @@ $(document).ready(function() {
 	// Admin settings
 	$('#check_version').change(function () {
 		settings.setAdminKey('check_version', $(this).is(":checked"));
+		if($(this).is(":checked")) {
+			setTimeout("location.reload();", 2500);
+		}
 	});
 	
 	$('#app_path').keyup(function() {
