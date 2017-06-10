@@ -1,6 +1,8 @@
 # Passwords
-#### for ownCloud 8 and later and NextCloud 9 and later
-##### 2015-2016, Fallon Turner <fcturner@users.noreply.github.com>
+#### For NextCloud 12
+#### Please note that this fork of Fallon Turner ownCloud App simply focuses on NextCloud compatibility
+##### 2015-2017, Fallon Turner <fcturner@users.noreply.github.com>
+##### 2017, Marius Wieschollek <marius-wieschollek@users.noreply.github.com>
 Available in 25 languages: 
 <img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/uksmall.gif" title="English" height="15" /> 
 <img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/desmall.gif" title="German" height="15" /> 
@@ -27,32 +29,32 @@ Available in 25 languages:
 <img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/sismall.gif" title="Slovenian" height="15" /> 
 <img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/issmall.gif" title="Icelandic" height="15" /> 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Galicia.svg/150px-Flag_of_Galicia.svg.png" title="Galician" height="15" />  
-###### This app cannot be installed from within ownCloud, since this system demands repackaging of releases and kills the possibility to freely use GitHub master versions. (read more below under [Installation](https://github.com/fcturner/passwords#installation))
+###### This app cannot be installed from within NextCloud, since this system demands repackaging of releases and kills the possibility to freely use GitHub master versions. (read more below under [Installation](https://github.com/marius-wieschollek/passwords#installation))
 [View this app on apps.owncloud.org.](https://apps.owncloud.com/content/show.php/Passwords?content=170480)
 
 ## Contents
-*  [Overview](https://github.com/fcturner/passwords#overview)
-*  [Summary](https://github.com/fcturner/passwords#summary)
-*  [Security](https://github.com/fcturner/passwords#security)
- * [Password generation](https://github.com/fcturner/passwords#-password-generation)
- * [Encryption (for storage in database)](https://github.com/fcturner/passwords#-encryption-for-storage-in-database)
- * [Decryption (for pulling from database)](https://github.com/fcturner/passwords#-decryption-for-pulling-from-database)
- * [Sharing](https://github.com/fcturner/passwords#-sharing)
-*  [Remote control](https://github.com/fcturner/passwords#remote-control)
-*  [Website icons](https://github.com/fcturner/passwords#website-icons)
-*  [Translations](https://github.com/fcturner/passwords#translations)
-*  [**Installation**](https://github.com/fcturner/passwords#installation)
-*  [Credits](https://github.com/fcturner/passwords#credits)
+*  [Overview](https://github.com/marius-wieschollek/passwords#overview)
+*  [Summary](https://github.com/marius-wieschollek/passwords#summary)
+*  [Security](https://github.com/marius-wieschollek/passwords#security)
+ * [Password generation](https://github.com/marius-wieschollek/passwords#-password-generation)
+ * [Encryption (for storage in database)](https://github.com/marius-wieschollek/passwords#-encryption-for-storage-in-database)
+ * [Decryption (for pulling from database)](https://github.com/marius-wieschollek/passwords#-decryption-for-pulling-from-database)
+ * [Sharing](https://github.com/marius-wieschollek/passwords#-sharing)
+*  [Remote control](https://github.com/marius-wieschollek/passwords#remote-control)
+*  [Website icons](https://github.com/marius-wieschollek/passwords#website-icons)
+*  [Translations](https://github.com/marius-wieschollek/passwords#translations)
+*  [**Installation**](https://github.com/marius-wieschollek/passwords#installation)
+*  [Credits](https://github.com/marius-wieschollek/passwords#credits)
 
 
 ## Overview
-:camera: [More pictures in the gallery](https://github.com/fcturner/passwords/wiki/ownCloud-Passwords-%7C-Gallery-(screenshots)).
+:camera: [More pictures in the gallery](https://github.com/marius-wieschollek/passwords/wiki/ownCloud-Passwords-%7C-Gallery-(screenshots)).
 ![Overview of ownCloud Passwords](https://raw.githubusercontent.com/fcturner/passwords/master/img/screenshot3.PNG)
 
-:camera: [More pictures in the gallery](https://github.com/fcturner/passwords/wiki/ownCloud-Passwords-%7C-Gallery-(screenshots)).
+:camera: [More pictures in the gallery](https://github.com/marius-wieschollek/passwords/wiki/ownCloud-Passwords-%7C-Gallery-(screenshots)).
 
 ## Summary
-This is the safest Password Manager for generating, sharing, editing, and categorizing passwords in ownCloud 8 and later and NextCloud 9 and later ([see 'img'-folder](/img/) for screenshots or [here for the gallery](https://github.com/fcturner/passwords/wiki/ownCloud-Passwords-%7C-Gallery-(screenshots))). It has full LDAP support and features **both client side and server side encryption** (using combined EtM [Encrypt-then-MAC] and MCRYPT_BLOWFISH encryption with user-specific, ownCloud/NextCloud-specific, and database entry-specific data), where only the user who creates the password is able to decrypt and view it. So passwords are stored heavily encrypted into the ownCloud/NextCloud database (read [Security part](https://github.com/fcturner/passwords#security) for details). You can insert or import your own passwords or randomly generate new ones. Some characters are excluded upon password generation for readability purposes (1, I, l and B, 8 and o, O, 0).
+This is the safest Password Manager for generating, sharing, editing, and categorizing passwords in ownCloud 8 and later and NextCloud 9 and later ([see 'img'-folder](/img/) for screenshots or [here for the gallery](https://github.com/marius-wieschollek/passwords/wiki/ownCloud-Passwords-%7C-Gallery-(screenshots))). It has full LDAP support and features **both client side and server side encryption** (using combined EtM [Encrypt-then-MAC] and MCRYPT_BLOWFISH encryption with user-specific, ownCloud/NextCloud-specific, and database entry-specific data), where only the user who creates the password is able to decrypt and view it. So passwords are stored heavily encrypted into the ownCloud/NextCloud database (read [Security part](https://github.com/marius-wieschollek/passwords#security) for details). You can insert or import your own passwords or randomly generate new ones. Some characters are excluded upon password generation for readability purposes (1, I, l and B, 8 and o, O, 0).
 
 This app is primarily intended as a password MANAGER, e.g. for a local ownCloud/NextCloud instance on your own WPA2 protected LAN. If you trust yourself enough as security expert, you can use this app behind an SSL secured server for a neat cloud solution. The app will be blocked (with message) if not accessed thru https, which will result in your passwords not being loaded (decrypted) and shown. To prevent this, use ownCloud/NextClouds own 'Force SSL'-function on the admin page, or use HSTS (HTTP Strict Transport Security) on your server. Also, make sure your server hasn't any kind of vulnerabilities (POODLE, CSRF, XSS, SQL Injection, Privilege Escalation, Remote Code Execution, to name a few).
 
@@ -82,7 +84,7 @@ Other users or administrators are never able to decrypt passwords, since they ca
 For sharing, an ad hoc share key is created everytime a share is initiated. This is a 256-bit strong hash, with no retrievable information. The share key is stored encrypted as above for the user who shares a password and copied to another table where this key matches the password ID and the ownCloud/NextCloud ID of the user to whom the password is shared with. If the share keys match, the password will be decrypted at the receiving user's side too. If they don't, the receiving user will see an 'Invalid share key' notice and the password will not be decrypted at all.
 
 ## Remote control
-This app allows full remote control by using a RESTful API. Read here about how to use it: https://github.com/fcturner/passwords/wiki.
+This app allows full remote control by using a RESTful API. Read here about how to use it: https://github.com/marius-wieschollek/passwords/wiki.
 
 Browser plugins are available for [Firefox here](https://addons.mozilla.org/en-US/firefox/addon/firefox-owncloud-passwords) (thanks to [@eglia](https://github.com/eglia)) and for [Chrome here](https://github.com/thefirstofthe300/ownCloud-Passwords) (thanks to [@thefirstofthe300](https://github.com/thefirstofthe300)).
 
@@ -162,10 +164,10 @@ Use one of the following options, login as admin on ownCloud/NextCloud and enabl
  * Use these commands (assuming `/var/www/owncloud` as your ownCloud/NextCloud root location). The first one is optional to remove an existing folder with contents.
  ```
 rm -rf /var/www/owncloud/apps/passwords
-git clone --branch 19 https://github.com/fcturner/passwords.git /var/www/owncloud/apps/passwords
+git clone --branch 19 https://github.com/marius-wieschollek/passwords.git /var/www/owncloud/apps/passwords
 ```
 * **Manual download and installation** 
- * [Click here to view the latest official release](https://github.com/fcturner/passwords/releases/latest) or, for the very last master version, [click here to download the zip](https://github.com/fcturner/passwords/archive/master.zip) or [here to download the tar.gz](https://github.com/fcturner/passwords/archive/master.tar.gz).
+ * [Click here to view the latest official release](https://github.com/marius-wieschollek/passwords/releases/latest) or, for the very last master version, [click here to download the zip](https://github.com/marius-wieschollek/passwords/archive/master.zip) or [here to download the tar.gz](https://github.com/marius-wieschollek/passwords/archive/master.tar.gz).
  * Copy, unzip or untar the folder 'passwords' to /owncloud/apps/ (**remember that the folder must be called 'passwords'**).
 * **ownCloud App store** 
  * I refuse to support this. This system demands repackaging of releases and kills the possibility to freely use GitHub master versions. Repackaging of releases is prone to human error and, more importantly, adds invisible system files to a release when doing this on Mac (like `.DS_Store`) and Windows (like `Thumbs.db`). This means local user properties and file system info (**privacy sensitive possibly**) are sent to a server, which **should be avoided at all costs**. Did you know forensic scientists can use these files against you? You surely don't want them on any server, any cloud, or anywhere on the internet! Dr Sarah Morris and Dr Howard Chivers [wrote an article about this](http://www.identatron.co.uk/wp-content/uploads/2013/11/cyberforensics2013.pdf). The ownCloud team should really alter the behaviour of ownCloud pulling apps from their app store, instead of letting app developers interfere with a decent, solid and closed GitHub workflow (as I've been telling them for months). **This app is all about privacy and security, the ownCloud app store apparently isn't.**

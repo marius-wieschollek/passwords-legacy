@@ -17,9 +17,9 @@
 	<apiVersion>20-beta9</apiVersion>
 	<namespace>Passwords</namespace>
 	<category>tool</category>
-	<website>https://github.com/fcturner/passwords</website>
-	<bugs>https://github.com/fcturner/passwords/issues</bugs>
-	<repository type="git">https://github.com/fcturner/passwords.git</repository>
+	<website>https://github.com/marius-wieschollek/passwords</website>
+	<bugs>https://github.com/marius-wieschollek/passwords/issues</bugs>
+	<repository type="git">https://github.com/marius-wieschollek/passwords/passwords.git</repository>
 	<ocsid>170480</ocsid>
 	<dependencies>
 		<nextcloud min-version="12.0" max-version="12.99"/>
@@ -29,7 +29,7 @@
 		<lib>mcrypt</lib>
 	</dependencies>
 	<documentation>
-	<user>https://github.com/fcturner/passwords/blob/master/README.md</user>
-	<admin>https://github.com/fcturner/passwords/wiki</admin>
+	<user>https://github.com/marius-wieschollek/passwords/blob/master/README.md</user>
+	<admin>https://github.com/marius-wieschollek/passwords/wiki</admin>
 	</documentation>
 </info>

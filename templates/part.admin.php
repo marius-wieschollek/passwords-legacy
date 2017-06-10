@@ -7,7 +7,7 @@ $checkVersion = OC::$server->getConfig()->getAppValue('passwords', 'check_versio
 if ($checkVersion) {
 	// get latest master version
 	$doc = new DOMDocument();
-	$doc->load('https://raw.githubusercontent.com/fcturner/passwords/master/appinfo/info.xml');
+	$doc->load('https://raw.githubusercontent.com/marius-wieschollek/passwords/master/appinfo/info.xml');
 	$root = $doc->getElementsByTagName("info");
 	foreach($root as $element) {
 		$versions = $element->getElementsByTagName("version");
@@ -16,7 +16,7 @@ if ($checkVersion) {
 	$githubVersion = $version;
 
 	// get latest release
-	$url = 'https://github.com/fcturner/passwords/releases/latest';
+	$url = 'https://github.com/marius-wieschollek/passwords/releases/latest';
 	$headers = get_headers($url);
 	$headers = array_reverse($headers);
 	foreach($headers as $header) {
@@ -25,7 +25,7 @@ if ($checkVersion) {
 			break;
 		}
 	}
-	$latestRelease = str_replace('https://github.com/fcturner/passwords/releases/tag/', '', $url);
+	$latestRelease = str_replace('https://github.com/marius-wieschollek/passwords/releases/tag/', '', $url);
 }
 
 $app_path = OC::$server->getConfig()->getAppValue('passwords', 'app_path', OC::$SERVERROOT . '/apps');
@@ -47,30 +47,30 @@ $app_path = OC::$server->getConfig()->getAppValue('passwords', 'app_path', OC::$
 		<input class="checkbox" type="checkbox" id="check_version">
 		<label for="check_version"><?php p($l->t('Check for new versions here (requires reload of this page)')); ?></label>
 		<p class="descr">
-			<em><?php print_unescaped($l->t('This will send your IP address to %s', '<a class="linkDDG" href="https://github.com/fcturner/passwords" target="_blank">github.com</a>')); ?>.</em>
+			<em><?php print_unescaped($l->t('This will send your IP address to %s', '<a class="linkDDG" href="https://github.com/marius-wieschollek/passwords" target="_blank">github.com</a>')); ?>.</em>
 		</p>
 		
 		<?php
 		if ($checkVersion) {
-			if (version_compare($thisVersion, $githubVersion) != 0) { ?>
+			if (version_compare($thisVersion, $githubVersion) == -1) { ?>
 				<p><?php p($l->t('A new master version is available! This might however be a beta version.')); ?></p>
 				<ul>
 					<li>
 						<strong><?php p($l->t('Available') . ': v' . $githubVersion); ?></strong> 
-						<a href="https://github.com/fcturner/passwords/archive/master.zip" class="button"><?php p($l->t('Download %s', 'ZIP')); ?></a>
-						<a href="https://github.com/fcturner/passwords/archive/master.tar.gz" class="button"><?php p($l->t('Download %s', 'TAR')); ?></a>
+						<a href="https://github.com/marius-wieschollek/passwords/archive/master.zip" class="button"><?php p($l->t('Download %s', 'ZIP')); ?></a>
+						<a href="https://github.com/marius-wieschollek/passwords/archive/master.tar.gz" class="button"><?php p($l->t('Download %s', 'TAR')); ?></a>
 					</li>
 					<li><?php p($l->t('Latest official release') . ': v' . $latestRelease); ?></li>
 				</ul>
 				<br>
-				<a href="https://github.com/fcturner/passwords/blob/master/CHANGELOG.md" class="button" target="_blank"><?php p($l->t('List of changes since %s', 'v' . $thisVersion)); ?></a>
-				<a href="https://github.com/fcturner/passwords/releases" class="button" target="_blank"><?php p($l->t('View all releases')); ?></a>
-				<a href="https://github.com/fcturner/passwords" class="button" target="_blank"><?php p($l->t('Visit %s', 'GitHub')); ?></a>
+				<a href="https://github.com/marius-wieschollek/passwords/blob/master/CHANGELOG.md" class="button" target="_blank"><?php p($l->t('List of changes since %s', 'v' . $thisVersion)); ?></a>
+				<a href="https://github.com/marius-wieschollek/passwords/releases" class="button" target="_blank"><?php p($l->t('View all releases')); ?></a>
+				<a href="https://github.com/marius-wieschollek/passwords" class="button" target="_blank"><?php p($l->t('Visit %s', 'GitHub')); ?></a>
 				<br>
 				<br>
 				<p><?php p($l->t('Or update with CLI')); ?>:</p>
 				<p class="gitcode">sudo rm -rf <?php p($app_path); ?>/passwords</p>
-				<p class="gitcode">sudo git clone https://github.com/fcturner/passwords.git <?php p($app_path); ?>/passwords</p>
+				<p class="gitcode">sudo git clone https://github.com/marius-wieschollek/passwords.git <?php p($app_path); ?>/passwords</p>
 				<p class="gitcode">sudo -u <?php p(posix_getpwuid(fileowner(OC::$SERVERROOT . '/config/config.php'))['name']) ?> php <?php p(OC::$SERVERROOT); ?>/occ upgrade</p>
 			<?php } else { ?>
 				<p><?php p($l->t('The latest version is already installed') . ': v' . $thisVersion . '.'); ?></p>
