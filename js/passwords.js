@@ -1456,7 +1456,7 @@
 					$('#app-settings').attr("active-table", 'trashbin');
 
 					$('#PasswordsTableContent tbody tr').hide();
-					$('#PasswordsTableContent tbody tr.is_deleted').show();
+					$('#PasswordsTableContent tbody tr.is_deleted').css('display', 'table-row');
 
 					if ($(".menu_passwords_trashbin").text() > 0) {
 						$('#cleartrashbin').show();
