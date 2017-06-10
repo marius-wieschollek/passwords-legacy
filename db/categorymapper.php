@@ -18,7 +18,7 @@ class CategoryMapper extends Mapper {
 	public function findAll($userId) {
 		$dbtype = \OC::$server->getConfig()->getSystemValue('dbtype', 'sqlite3');
 		if ($dbtype == 'mysql') {
-			$sql = 'SELECT * FROM *PREFIX*passwords_categories WHERE user_id = ? ORDER BY LOWER(category_name) COLLATE utf8mb4_general_ci ASC';
+			$sql = 'SELECT * FROM *PREFIX*passwords_categories WHERE user_id = ? ORDER BY LOWER(category_name) ASC';
 		} else if ($dbtype == 'sqlite' OR $dbtype == 'sqlite3') {
 			$sql = 'SELECT * FROM *PREFIX*passwords_categories WHERE user_id = ? ORDER BY category_name COLLATE NOCASE';
 		} else {

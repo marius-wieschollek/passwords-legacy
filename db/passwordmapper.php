@@ -88,7 +88,7 @@ class PasswordMapper extends Mapper {
 
 		// order by website according to database used
 		if ($dbtype == 'mysql') {
-			$sql = $sql . ' ORDER BY LOWER(website) COLLATE utf8mb4_general_ci ASC';
+			$sql = $sql . ' ORDER BY LOWER(website) ASC';
 		} else if ($dbtype == 'sqlite' OR $dbtype == 'sqlite3') {
 			$sql = $sql . ' ORDER BY website COLLATE NOCASE';
 		} else {
