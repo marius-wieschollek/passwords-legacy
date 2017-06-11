@@ -88,3 +88,8 @@
 	margin-top: 15px;
 	margin-bottom: 15px;
 }
+
+.nav-icon-passwords,
+.nav-icon-passwörter {
+	background-image: url('../img/app_black.svg?v=1');
+}
