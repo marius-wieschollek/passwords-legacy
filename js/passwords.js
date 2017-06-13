@@ -412,7 +412,7 @@
 						$('#btn_edit').show();
 						$('#btn_share').show();
 						$('#btn_view').hide();
-						$('#commands_popup input').css('width', '80px');
+						$('#commands_popup input').css('width', '90px');
 					}
 
 					$('#btn_copy').attr('data-clipboard-text', $('#cmd_value').val());

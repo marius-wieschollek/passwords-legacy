@@ -303,10 +303,14 @@ tr.activerow {
 }
 
 #commands_popup input {
-	width        : 80px;
-	border       : 0 !important;
+	width        : 90px;
 	margin-right : 3px !important;
-	margin-left  : 3px !important
+	margin-left  : 3px !important;
+	border: 1px solid #dbdbdb;
+}
+
+#commands_popup input:hover {
+	border-color: #0057ae;
 }
 
 tr > td:hover .btn_commands_inline,
