@@ -417,16 +417,17 @@
 
 					$('#btn_copy').attr('data-clipboard-text', $('#cmd_value').val());
 
-					if ($('#app-navigation').css('position') == 'absolute') {
-						var left = $(this).position().left;
-					} else {
-						var left = $(this).position().left + $('#app-navigation').width();
-					}
-					left = left + $('.btn_commands_open').width() - ($('#commands_popup').width() / 2);
-					var top = $(this).position().top + $('#header').height() + 25;
-					$('#commands_popup').css('left', left + 'px');
-					$('#commands_popup').css('top', top + 'px');
-					$('#commands_popup').slideDown(150);
+					var $this = $(this),
+						$parent = $this.parent(),
+						$commands = $('#commands_popup'),
+						offset = $parent.offset(),
+						left = offset.left + $this.outerWidth() - $commands.outerWidth(),
+						top = offset.top + $this.outerHeight();
+					$commands.css({
+									  'left':  left + 'px',
+									  'top':  top + 'px'
+					});
+					$commands.slideDown(150);
 				});
 
 				// colour picker from the great https://github.com/bgrins/spectrum
