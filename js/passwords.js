@@ -422,7 +422,7 @@
 						$commands = $('#commands_popup'),
 						offset = $parent.offset(),
 						left = offset.left + $this.outerWidth() - $commands.outerWidth(),
-						top = offset.top + $this.outerHeight(true);
+						top = offset.top + $this.outerHeight();
 					$commands.css({
 									  'left':  left + 'px',
 									  'top':  top + 'px'
