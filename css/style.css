@@ -295,11 +295,12 @@ tr.activerow {
 
 #commands_popup {
 	position         : fixed;
-	width            : 180px;
+	width            : 200px;
 	border           : 1px solid #bbb;
 	background-color : #eee;
 	text-align       : center;
 	z-index          : 200;
+	border-radius    : 3px;
 }
 
 #commands_popup input {
