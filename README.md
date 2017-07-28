@@ -42,6 +42,7 @@ Available in 25 languages:
 *  [Remote control](https://github.com/marius-wieschollek/passwords#remote-control)
 *  [Website icons](https://github.com/marius-wieschollek/passwords#website-icons)
 *  [Translations](https://github.com/marius-wieschollek/passwords#translations)
+*  [**Requirements**](https://github.com/marius-wieschollek/passwords#requirements)
 *  [**Installation**](https://github.com/marius-wieschollek/passwords#installation)
 *  [Credits](https://github.com/marius-wieschollek/passwords#credits)
 
@@ -148,6 +149,10 @@ ownCloud/NextCloud Passwords is available in:
 <img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/issmall.gif" height="16" /> Icelandic
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Galicia.svg/150px-Flag_of_Galicia.svg.png" height="16" /> Galician
+
+## Requirements
+* Nextcloud 12
+* PHP 7.1
 
 ## Installation
 ### Updating from previous version
