@@ -138,10 +138,14 @@ class PasswordService {
 	}
 
 	public function create($website, $pass, $loginname, $address, $notes, $category, $deleted, $userId) {
+        $website = strip_tags($website);
+        $loginname = strip_tags($loginname);
+        $address = strip_tags($address);
+        $notes = strip_tags($notes);
 
 		$properties = 
-			'"loginname" : "' . $loginname . '", ' .
-			'"address" : "' . $address . '", ' .
+			'"loginname" : "' . strip_tags($loginname) . '", ' .
+			'"address" : "' . strip_tags($address) . '", ' .
 			'"strength" : "' . Calculations::pwstrength($pass) . '", ' .
 			'"length" : "' . strlen($pass) . '", ' .
 			'"lower" : "' . Calculations::strhaslower($pass) . '", ' .
@@ -150,7 +154,7 @@ class PasswordService {
 			'"special" : "' . Calculations::strhasspecial($pass) . '", ' .
 			'"category" : "' . $category . '", ' .
 			'"datechanged" : "' . date('Y-m-d') . '", ' .
-			'"notes" : "' . $notes . '"';
+			'"notes" : "' . htmlspecialchars($notes) . '"';
 
 		$userKey = $userId;
 		$serverKey = \OC::$server->getConfig()->getSystemValue('passwordsalt', '');
@@ -287,6 +291,10 @@ class PasswordService {
 	}
 
 	public function update($id, $website, $pass, $loginname, $address, $notes, $sharewith, $category, $deleted, $datechanged, $userId) {
+        $website = strip_tags($website);
+        $loginname = strip_tags($loginname);
+        $address = strip_tags($address);
+        $notes = strip_tags($notes);
 
 		$isShared = $this->mapper->isShared($id);
 		$isTrashed = $this->mapper->isTrashed($id);
@@ -341,8 +349,8 @@ class PasswordService {
 		}
 
 		$properties = 
-			'"loginname" : "' . $loginname . '", ' .
-			'"address" : "' . $address . '", ' .
+			'"loginname" : "' . strip_tags($loginname) . '", ' .
+			'"address" : "' . strip_tags($address) . '", ' .
 			'"strength" : "' . Calculations::pwstrength($pass) . '", ' .
 			'"length" : "' . strlen($pass) . '", ' .
 			'"lower" : "' . Calculations::strhaslower($pass) . '", ' .
@@ -351,7 +359,7 @@ class PasswordService {
 			'"special" : "' . Calculations::strhasspecial($pass) . '", ' .
 			'"category" : "' . $category . '", ' .
 			'"datechanged" : "' . $datechanged . '", ' .
-			'"notes" : "' . $notes . '"';
+			'"notes" : "' . htmlspecialchars($notes) . '"';
 
 		if (count($sharewith) > 0 AND $sharewith != '') {
 			$properties = 

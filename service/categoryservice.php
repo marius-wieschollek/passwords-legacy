@@ -42,7 +42,7 @@ class CategoryService {
 		// validity check when used by API
 		if (preg_match('/#([a-f0-9]{3}){1,2}\b/i', '#' . $categoryColour)) {
 			$category = new Category();
-			$category->setCategoryName($categoryName);
+			$category->setCategoryName(strip_tags($categoryName));
 			$category->setCategoryColour($categoryColour);
 			$category->setUserId($userId);
 			return $this->mapper->insert($category);
