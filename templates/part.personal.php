@@ -11,7 +11,7 @@
 		app-path="<?php p(OC::$server->getConfig()->getAppValue('passwords', 'app_path', OC::$SERVERROOT.'/apps')) ?>" >
 	</div>
 
-	<h2><?php p($l->t('Passwords')); ?></h2>
+	<h2 class="icon-passwords" data-anchor-name="passwords"><?php p($l->t('Passwords')); ?></h2>
 
 	<div>
 		<input class="checkbox" type="checkbox" id="timer_bool">

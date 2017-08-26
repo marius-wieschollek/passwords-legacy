@@ -2,18 +2,10 @@
 <info>
 	<id>passwords</id>
 	<name>Passwords</name>
-	<description>This is a Password Manager with both client side and server side encryption for generating, SHARING (including LDAP), editing, and categorizing passwords. 
-	NOTE! THIS APP CANNOT BE INSTALLED FROM WITHIN OWNCLOUD, since this system demands repackaging of releases and kills the possibility to freely use GitHub master versions. Repackaging of releases is prone to human error and, more importantly, adds invisible system files to a release when doing this on Mac (like .DS_Store) and Windows (like Thumbs.db). This means local user properties and file system info (privacy sensitive possibly) are sent to a server, which should be avoided at all costs. Did you know forensic scientists can use these files against you? You surely don't want them on any server, any cloud, or anywhere on the internet!
-
-	It features both client side and server side encryption (using combined EtM [Encrypt-then-MAC] and MCRYPT_BLOWFISH encryption with user-specific, ownCloud-specific, and database entry-specific data), where only the user who creates the password is able to decrypt and view it. So passwords are stored heavily encrypted into the ownCloud database (read Security part in documentation for details). You can insert or import your own passwords (KeePass, LastPass, ...) or randomly generate new ones. Some characters are excluded upon password generation for readability purposes (1, I, l and B, 8 and o, O, 0).
-
-	Important: passwords can only be read (decrypted) by the user who created the password, on the ownCloud-instance where the password was created in (i.e. same password salt in config.php). If you lose the password salt, all passwords of all users are lost and irretrievable.
-
-	Please read the documentation for more information about the generation of passwords and its security.
-	</description>
+	<description>A simple and easy to use password manager</description>
 	<licence>AGPL</licence>
-	<author>Fallon Turner</author>
-	<version>2017.6</version>
+	<author>Fallon Turner, Marius Wieschollek</author>
+	<version>2017.9</version>
 	<apiVersion>20-beta9</apiVersion>
 	<namespace>Passwords</namespace>
 	<category>tool</category>
