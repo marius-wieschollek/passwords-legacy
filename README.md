@@ -29,7 +29,6 @@ Available in 25 languages:
 <img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/sismall.gif" title="Slovenian" height="15" /> 
 <img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/issmall.gif" title="Icelandic" height="15" /> 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Galicia.svg/150px-Flag_of_Galicia.svg.png" title="Galician" height="15" />  
-###### This app cannot be installed from within NextCloud, since this system demands repackaging of releases and kills the possibility to freely use GitHub master versions. (read more below under [Installation](https://github.com/marius-wieschollek/passwords#installation))
 
 ## Contents
 *  [Overview](https://github.com/marius-wieschollek/passwords#overview)
@@ -40,8 +39,7 @@ Available in 25 languages:
  * [Decryption (for pulling from database)](https://github.com/marius-wieschollek/passwords#-decryption-for-pulling-from-database)
  * [Sharing](https://github.com/marius-wieschollek/passwords#-sharing)
 *  [Remote control](https://github.com/marius-wieschollek/passwords#remote-control)
-*  [Website icons](https://github.com/marius-wieschollek/passwords#website-icons)
-*  [Translations](https://github.com/marius-wieschollek/passwords#translations)
+*  [**Requirements**](https://github.com/marius-wieschollek/passwords#requirements)
 *  [**Installation**](https://github.com/marius-wieschollek/passwords#installation)
 *  [Credits](https://github.com/marius-wieschollek/passwords#credits)
 
@@ -87,89 +85,32 @@ This app allows full remote control by using a RESTful API. Read here about how 
 
 Browser plugins are available for [Firefox here](https://addons.mozilla.org/en-US/firefox/addon/firefox-owncloud-passwords) (thanks to [@eglia](https://github.com/eglia)) and for [Chrome here](https://github.com/thefirstofthe300/ownCloud-Passwords) (thanks to [@thefirstofthe300](https://github.com/thefirstofthe300)).
 
-## Website icons
-There is a built in option to view website icons in the password table. This can be set by the administrator on the settings page of ownCloud/NextCloud. The admin has two services to choose from: DuckDuckGo (default) and Google. Icons are downloaded from their secured server when a user loads the page. Nothing fancy or unsafe (even using Google... although [they track you](http://donttrack.us)), it's just about icons. The icons for the websites of ownCloud and NextCloud for example (replace *owncloud.org* with your own domain to try): 
-* [https://icons.duckduckgo.com/ip2/owncloud.org.ico](https://icons.duckduckgo.com/ip2/owncloud.org.ico) (32x32 pixels)
- * <img src="https://icons.duckduckgo.com/ip2/owncloud.org.ico"/> 
- * <img src="https://icons.duckduckgo.com/ip2/nextcloud.com.ico"/> 
-* [https://www.google.com/s2/favicons?domain=owncloud.org](https://www.google.com/s2/favicons?domain=owncloud.org) (16x16 pixels)
- * <img src="https://www.google.com/s2/favicons?domain=owncloud.org"/> 
- * <img src="https://www.google.com/s2/favicons?domain=nextcloud.com"/> 
-
-## Translations
-ownCloud/NextCloud Passwords is available in:
-
-<img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/uksmall.gif" height="16" /> English
-
-<img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/desmall.gif" height="16" /> German
-
-<img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/essmall.gif" height="16" /> Spanish
-
-<img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/frsmall.gif" height="16" /> French
-
-<img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/itsmall.gif" height="16" /> Italian
-
-<img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/nlsmall.gif" height="16" /> Dutch
-
-<img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/dksmall.gif" height="16" /> Danish
-
-<img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/czsmall.gif" height="16" /> Czech
-
-<img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/nosmall.gif" height="16" /> Norwegian Bokmål
-
-<img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/rusmall.gif" height="16" /> Russian
-
-<img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/jpsmall.gif" height="16" /> Japanese
-
-<img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/plsmall.gif" height="16" /> Polish
-
-<img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/brsmall.gif" height="16" /> Portuguese (Brazil)
-
-<img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/ptsmall.gif" height="16" /> Portuguese (Portugal)
-
-<img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/mxsmall.gif" height="16" /> Spanish (Mexico)
-
-<img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/trsmall.gif" height="16" /> Turkish
-
-<img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/sesmall.gif" height="16" /> Swedish
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Catalonia.svg/150px-Flag_of_Catalonia.svg.png" height="16" /> Catalan
-
-<img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/thsmall.gif" height="16" /> Thai
-
-<img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/ilsmall.gif" height="16" /> Hebrew
-
-<img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/rosmall.gif" height="16" /> Romanian
-
-<img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/alsmall.gif" height="16" /> Albanian
-
-<img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/sismall.gif" height="16" /> Slovenian
-
-<img src="http://www.worldatlas.com/webimage/flags/countrys/zzzflags/issmall.gif" height="16" /> Icelandic
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Galicia.svg/150px-Flag_of_Galicia.svg.png" height="16" /> Galician
+## Requirements
+* Nextcloud 12
+* PHP 7.1
 
 ## Installation
 ### Updating from previous version
-From v19 on: Login as admin on ownCloud/NextCloud and **go to the passwords section** on the **admin page**. It will notify you whether there's an update, or you're already up to date. When there's an update, buttons will appear to download the latest version and all command lines with adapted file owner names (`www-data` in below example) and right app location (`/var/www/owncloud_prod/apps/passwords` in below example) to run the update very fast on your CLI.
+Login as admin on NextCloud and **go to the passwords section** on the **admin page**. It will notify you whether there's an update, or you're already up to date. When there's an update, buttons will appear to download the latest version and all command lines with adapted file owner names (`www-data` in below example) and right app location (`/var/www/owncloud_prod/apps/passwords` in below example) to run the update very fast on your CLI.
 
 *Note: on versions lower than v19, these commands still work.*
 
 ![Updating the app](https://raw.githubusercontent.com/marius-wieschollek/passwords/stable/img/versionchecker.png)
 
 ### Initial installation
-Use one of the following options, login as admin on ownCloud/NextCloud and enable the app. The database tables `oc_passwords`, `oc_passwords_categories` and `oc_passwords_share` will be created automatically (assuming `_oc` as prefix).
+Use one of the following options, login as admin on NextCloud and enable the app. The database tables `oc_passwords`, `oc_passwords_categories` and `oc_passwords_share` will be created automatically (assuming `_oc` as prefix).
 * **Git clone (fastest)** 
- * Use these commands (assuming `/var/www/owncloud` as your ownCloud/NextCloud root location). The first one is optional to remove an existing folder with contents.
+ * Use these commands (assuming `/var/www/nextcloud` as your ownCloud/NextCloud root location). The first one is optional to remove an existing folder with contents.
  ```
 rm -rf /var/www/owncloud/apps/passwords
-git clone --branch 19 https://github.com/marius-wieschollek/passwords.git /var/www/owncloud/apps/passwords
+git clone --branch stable https://github.com/marius-wieschollek/passwords.git /var/www/nextcloud/apps/passwords
 ```
 * **Manual download and installation** 
- * [Click here to view the latest official release](https://github.com/marius-wieschollek/passwords/releases/latest) or, for the very last master version, [click here to download the zip](https://github.com/marius-wieschollek/passwords/archive/master.zip) or [here to download the tar.gz](https://github.com/marius-wieschollek/passwords/archive/master.tar.gz).
- * Copy, unzip or untar the folder 'passwords' to /owncloud/apps/ (**remember that the folder must be called 'passwords'**).
-* **ownCloud App store** 
- * I refuse to support this. This system demands repackaging of releases and kills the possibility to freely use GitHub master versions. Repackaging of releases is prone to human error and, more importantly, adds invisible system files to a release when doing this on Mac (like `.DS_Store`) and Windows (like `Thumbs.db`). This means local user properties and file system info (**privacy sensitive possibly**) are sent to a server, which **should be avoided at all costs**. Did you know forensic scientists can use these files against you? You surely don't want them on any server, any cloud, or anywhere on the internet! Dr Sarah Morris and Dr Howard Chivers [wrote an article about this](http://www.identatron.co.uk/wp-content/uploads/2013/11/cyberforensics2013.pdf). The ownCloud team should really alter the behaviour of ownCloud pulling apps from their app store, instead of letting app developers interfere with a decent, solid and closed GitHub workflow (as I've been telling them for months). **This app is all about privacy and security, the ownCloud app store apparently isn't.**
+ * [Click here to view the latest official release](https://github.com/marius-wieschollek/passwords/releases/latest) or, for the very last master version, [click here to download the zip](https://github.com/marius-wieschollek/passwords/archive/stable.zip) or [here to download the tar.gz](https://github.com/marius-wieschollek/passwords/archive/stable.tar.gz).
+ * Copy, unzip or untar the folder 'passwords' to /nextcloud/apps/ (**remember that the folder must be called 'passwords'**).
+
+* Installation from NextCloud AppStore
+ * Comes as soon as i manage to integrate it
 
 ## Credits
 A big thanks to all participants in this project. I thank Anthony Ferrara ([ircmaxell](http://careers.stackoverflow.com/ircmaxell)), for [teaching the world how to properly set up](http://stackoverflow.com/questions/5089841/two-way-encryption-i-need-to-store-passwords-that-can-be-retrieved/5093422#5093422) security in PHP.
