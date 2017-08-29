@@ -11,17 +11,14 @@ A simple password storage for Nextcloud 12
 *  [Credits](https://github.com/marius-wieschollek/passwords#credits)
 
 ## Summary
-This is the safest Password Manager for generating, sharing, editing, and categorizing passwords in ownCloud 8 and later and NextCloud 9 and later ([see 'img'-folder](/img/) for screenshots or [here for the gallery](https://github.com/marius-wieschollek/passwords/wiki/ownCloud-Passwords-%7C-Gallery-(screenshots))). It has full LDAP support and features **both client side and server side encryption** (using combined EtM [Encrypt-then-MAC] and MCRYPT_BLOWFISH encryption with user-specific, ownCloud/NextCloud-specific, and database entry-specific data), where only the user who creates the password is able to decrypt and view it. So passwords are stored heavily encrypted into the ownCloud/NextCloud database (read [Security part](https://github.com/marius-wieschollek/passwords#security) for details). You can insert or import your own passwords or randomly generate new ones. Some characters are excluded upon password generation for readability purposes (1, I, l and B, 8 and o, O, 0).
-
-This app is primarily intended as a password MANAGER, e.g. for a local ownCloud/NextCloud instance on your own WPA2 protected LAN. If you trust yourself enough as security expert, you can use this app behind an SSL secured server for a neat cloud solution. The app will be blocked (with message) if not accessed thru https, which will result in your passwords not being loaded (decrypted) and shown. To prevent this, use ownCloud/NextClouds own 'Force SSL'-function on the admin page, or use HSTS (HTTP Strict Transport Security) on your server. Also, make sure your server hasn't any kind of vulnerabilities (POODLE, CSRF, XSS, SQL Injection, Privilege Escalation, Remote Code Execution, to name a few).
-
-The script for creating passwords can be found in [these lines of `/js/passwords.js`](/js/passwords.js#L1898-L1950).
+This is a safe Password Manager for creating, sharing, editing, and categorizing passwords in NextCloud 12 and later ([see 'img'-folder](/img/) for screenshots or [here for the gallery](https://github.com/marius-wieschollek/passwords/wiki/ownCloud-Passwords-%7C-Gallery-(screenshots))). It has full LDAP support and features server side encryption using combined EtM [Encrypt-then-MAC].
+You can insert or import your own passwords or randomly generate new ones.
 
 ## Security
-Currently the app only supports server side encryption with mcrypt. A more up-to-date client side encryption will be added soon.
+All passwords are encrypted using a server side encryption. Every password is encrypted with it's own key.
 
 ## API and Third Party Apps
-This app allows full remote control by using a RESTful API. Read here about how to use it: https://github.com/marius-wieschollek/passwords/wiki.
+This app allows full remote control by using a RESTful API.
 
 Browser plugins are available for [Firefox here](https://addons.mozilla.org/en-US/firefox/addon/firefox-owncloud-passwords) (thanks to [@eglia](https://github.com/eglia)) and for [Chrome here](https://github.com/thefirstofthe300/ownCloud-Passwords) (thanks to [@thefirstofthe300](https://github.com/thefirstofthe300)).
 
