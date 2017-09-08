@@ -24,7 +24,7 @@ Browser plugins are available for [Firefox here](https://addons.mozilla.org/en-U
 
 ## Requirements
 * Nextcloud 12
-* PHP 7.1
+* PHP 5.6
 * mcrypt
 * openssl
 
