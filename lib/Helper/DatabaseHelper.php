@@ -22,7 +22,7 @@ class DatabaseHelper {
     /**
      * @return string
      */
-    public function getCollation(): string {
+    public function getCollation() {
         $isUtf8Mb4Enabled = $this->config->getSystemValue('mysql.utf8mb4', false);
 
         return $isUtf8Mb4Enabled ? 'utf8mb4_general_ci':'utf8_general_ci';
@@ -31,7 +31,7 @@ class DatabaseHelper {
     /**
      * @return string
      */
-    public function getDatabaseType(): string {
+    public function getDatabaseType() {
         $dbtype = $this->config->getSystemValue('dbtype', 'sqlite');
 
         if($dbtype == 'sqlite3') return 'sqlite';
@@ -44,7 +44,7 @@ class DatabaseHelper {
      *
      * @return null|string
      */
-    public function getDatabaseDependentStatement(array $statements): ?string {
+    public function getDatabaseDependentStatement(array $statements) {
         $dbtype = $this->getDatabaseType();
 
         return isset($statements[ $dbtype ]) ? $statements[ $dbtype ]:$statements['default'];
