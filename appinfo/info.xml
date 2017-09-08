@@ -22,7 +22,7 @@
 	<bugs>https://github.com/marius-wieschollek/passwords/issues</bugs>
 	<repository type="git">https://github.com/marius-wieschollek/passwords/passwords.git</repository>
 	<dependencies>
-		<nextcloud min-version="12" max-version="12" />
+		<nextcloud min-version="11" max-version="12" />
 		<database>sqlite</database>
 		<database>mysql</database>
 		<database>pgsql</database>

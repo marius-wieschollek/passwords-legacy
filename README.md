@@ -23,8 +23,8 @@ This app allows full remote control by using a RESTful API.
 Browser plugins are available for [Firefox here](https://addons.mozilla.org/en-US/firefox/addon/firefox-owncloud-passwords) (thanks to [@eglia](https://github.com/eglia)) and for [Chrome here](https://github.com/thefirstofthe300/ownCloud-Passwords) (thanks to [@thefirstofthe300](https://github.com/thefirstofthe300)).
 
 ## Requirements
-* Nextcloud 12
-* PHP 5.6
+* Nextcloud 12 (works with 11, but not supported)
+* PHP 5.6 (Upgrade to PHP 7.0 for future releases)
 * mcrypt
 * openssl
 
