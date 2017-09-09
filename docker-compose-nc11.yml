@@ -5,7 +5,7 @@ services:
     image: mariadb
     restart: always
     volumes:
-      - db-legacy-12:/var/lib/mysql
+      - db-legacy-11:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=nextcloud
       - MYSQL_PASSWORD=nextcloud
@@ -13,11 +13,11 @@ services:
       - MYSQL_USER=nextcloud
 
   app:
-    image: nextcloud:12-fpm
+    image: nextcloud:11-fpm
     links:
       - db
     volumes:
-      - nc-legacy-12:/var/www/html
+      - nc-legacy-11:/var/www/html
       - ./:/var/www/html/custom_apps/passwords
     restart: always
 
@@ -47,5 +47,5 @@ services:
       PMA_PASSWORD: nextcloud
 
 volumes:
-  db-legacy-12:
-  nc-legacy-12:
+  db-legacy-11:
+  nc-legacy-11:
