@@ -38,8 +38,7 @@ $app_path = OC::$server->getConfig()->getAppValue('passwords', 'app_path', OC::$
 			<?php } else { ?>
 				<p><?php p($l->t('The latest version is already installed')); ?></p>
 
-				<input class="checkbox" type="checkbox" id="check_version">
-				<label for="check_version"><?php p($l->t('Check for new versions here (requires reload of this page)')); ?></label>
+				<button id="check_version"><?php p($l->t('Check for new versions here (requires reload of this page)')); ?></button>
 
 			<?php } ?>
 	</div>

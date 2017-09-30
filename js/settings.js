@@ -144,8 +144,6 @@ $(document).ready(function() {
 
 // ADMIN SETTINGS
 
-	// fill the boxes
-	$('#check_version').prop('checked', (settings.getKey('check_version').toLowerCase() == 'true'));
 	
 	$('#app_path').val(settings.getKey('app_path'));
 
@@ -168,12 +166,7 @@ $(document).ready(function() {
 	updateRed();
 
 	// Admin settings
-	$('#check_version').change(function () {
-		settings.setAdminKey('check_version', $(this).is(":checked"));
-		if($(this).is(":checked")) {
-			setTimeout("location.reload();", 2500);
-		}
-	});
+	$('#check_version').click(function() { location.reload(); });
 	
 	$('#app_path').keyup(function() {
 		settings.setAdminKey('app_path', $(this).val());
