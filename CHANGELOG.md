@@ -1,4 +1,11 @@
-#### 20 - NOT YET RELEASED
+#### 2017.9
+
+* Fixed XSS Injection Bug
+* Improved Update Checks
+* Set PHP requirement to 5.5
+* Set Nextcloud requirement to 11
+
+#### 20
 * Added possibility to **send emails to users** you've shared a password with
   * The email will not contain the password, but does contain the direct link to the Passwords app
   * The senders name, subject and body text of the email are written in the recipients language, even when you share it with multiple users that have set different languages

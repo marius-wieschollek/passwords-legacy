@@ -26,5 +26,5 @@
 	</form>
 </div>
 <div id="auth_footer">
-	<p id="githubref"><a href="https://github.com/marius-wieschollek/passwords" target="_blank"><?php p($instancename . ' ' . $passwordsname) ?></a> - <?php p($l->t('Version')); ?> <?php p($passwordsversion) ?></p>
+	<p id="githubref"><a href="https://github.com/marius-wieschollek/passwords-legacy" target="_blank"><?php p($instancename . ' ' . $passwordsname) ?></a> - <?php p($l->t('Version')); ?> <?php p($passwordsversion) ?></p>
 </div>

@@ -19,6 +19,13 @@
 		|| \OC::$server->getConfig()->getAppValue('passwords', 'https_check', 'true') == 'false';
 	};
 
+    function checkForUpdatesIfAdmin() {
+        $userId = \OC::$server->getUserSession()->getUser()->getUID();
+        if(!\OC::$server->getGroupManager()->isAdmin($userId)) return false;
+        $updateChecker = new \OCA\Passwords\Helper\UpdateCheckHelper();
+        return $updateChecker->hasUpdate();
+    }
+
 	style('passwords', 'style');
 	style('passwords', 'spectrum'); // colour picker
 	script('passwords', 'sha512'); // hash function
@@ -59,6 +66,10 @@
 			script('passwords', 'sorttable');
 			script('passwords', 'spectrum'); // colour picker
 			script('passwords', 'clipboard.min'); // clipboard function
+
+            if(checkForUpdatesIfAdmin()) {
+                print_unescaped($this->inc('part.update'));
+            }
 
 			?>
 
