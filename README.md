@@ -34,7 +34,7 @@ Login as admin on NextCloud and **go to the passwords section** on the **admin p
 
 *Note: on versions lower than v19, these commands still work.*
 
-![Updating the app](https://raw.githubusercontent.com/marius-wieschollek/passwords/stable/img/versionchecker.png)
+![Updating the app](https://raw.githubusercontent.com/marius-wieschollek/passwords-legacy/stable/img/versionchecker.png)
 
 ### Initial installation
 Use one of the following options, login as admin on NextCloud and enable the app. The database tables `oc_passwords`, `oc_passwords_categories` and `oc_passwords_share` will be created automatically (assuming `_oc` as prefix).
