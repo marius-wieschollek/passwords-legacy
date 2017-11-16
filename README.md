@@ -20,7 +20,7 @@ All passwords are encrypted using a server side encryption. Every password is en
 ## API and Third Party Apps
 This app allows full remote control by using a RESTful API.
 
-Browser plugins are available for [Firefox here](https://addons.mozilla.org/en-US/firefox/addon/firefox-owncloud-passwords) (thanks to [@eglia](https://github.com/eglia)) and for [Chrome here](https://github.com/thefirstofthe300/ownCloud-Passwords) (thanks to [@thefirstofthe300](https://github.com/thefirstofthe300)).
+Browser plugins are available for [Firefox here](https://addons.mozilla.org/de/firefox/addon/nextcloud-passwords/) and for [Chrome here](https://github.com/thefirstofthe300/ownCloud-Passwords) (thanks to [@thefirstofthe300](https://github.com/thefirstofthe300)).
 
 ## Requirements
 * Nextcloud 12 (works with 11, but not supported)

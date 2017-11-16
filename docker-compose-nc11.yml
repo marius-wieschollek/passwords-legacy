@@ -3,7 +3,7 @@ version: '2'
 services:
   db:
     image: mariadb
-    restart: always
+    restart: on-failure
     volumes:
       - db-legacy-11:/var/lib/mysql
     environment:
@@ -14,15 +14,16 @@ services:
 
   app:
     image: nextcloud:11-fpm
+    restart: on-failure
     links:
       - db
     volumes:
       - nc-legacy-11:/var/www/html
       - ./:/var/www/html/custom_apps/passwords
-    restart: always
 
   web:
     image: nginx
+    restart: on-failure
     ports:
       - 80:80
     links:
@@ -31,7 +32,6 @@ services:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
     volumes_from:
       - app
-    restart: always
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
