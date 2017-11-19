@@ -180,7 +180,10 @@ class PasswordService {
 		$password->setPass($encryptedPass);
 		$password->setProperties($encryptedProperties);
 		$password->setDeleted($deleted);
-		return $this->mapper->insert($password);
+		$object = $this->mapper->insert($password);
+        $object->setPass($pass);
+        $object->setProperties($properties);
+		return $object;
 	}
 	
 	public function sendmail($kind, $website, $sharewith, $domain, $fullurl, $instancename, $userId) {
@@ -396,7 +399,10 @@ class PasswordService {
 			$password->setProperties($encryptedProperties);
 			$password->setDeleted($deleted);
 
-			return $this->mapper->update($password);
+            $object = $this->mapper->update($password);
+            $object->setPass($pass);
+            $object->setProperties($properties);
+            return $object;
 		} catch(Exception $e) {
 			$this->handleException($e);
 		}
