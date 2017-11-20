@@ -1,6 +1,8 @@
-#### 2017.9
+#### 2017.11
+* **SECURITY** Fixed Encrypted data leak in API
 
-* Fixed XSS Injection Bug
+#### 2017.9
+* **SECURITY** Fixed XSS Injection Bug
 * Improved Update Checks
 * Set PHP requirement to 5.5
 * Set Nextcloud requirement to 11
