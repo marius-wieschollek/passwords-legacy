@@ -1822,7 +1822,7 @@ function formatTable(update_only, rows) {
 			}
 
 			// sidebar (info icon)
-			if (row.deleted) {
+			if (row.deleted==true || row.deleted=="true") {
 				// replace the info-icon by a revert icon when a password is in trash
 				html_row += '<td class="icon-history"></td>';
 			} else {

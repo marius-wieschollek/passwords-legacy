@@ -2,6 +2,9 @@
 **by Marius Wieschollek, original app by Fallon Turner**
 A simple password storage for Nextcloud 12
 
+> This app is no longer supported.
+> If you are looking for a safe and simple password manager, please use the [new app](https://github.com/marius-wieschollek/passwords).
+
 ## Contents
 *  [Summary](#summary)
 *  [Requirements](#requirements)
@@ -15,7 +18,9 @@ This is a safe Password Manager for creating, sharing, editing, and categorizing
 You can insert or import your own passwords or randomly generate new ones.
 
 ## Security
-All passwords are encrypted using a server side encryption. Every password is encrypted with it's own key.
+Passwords uses mcrypt to encrypt your passwords and will therefore no longer work on PHP 7.2.
+All passwords are encrypted using a server side encryption.
+Every password is encrypted with it's own key.
 
 ## API and Third Party Apps
 This app allows full remote control by using a RESTful API.
@@ -36,21 +41,6 @@ Login as admin on NextCloud and **go to the passwords section** on the **admin p
 *Note: on versions lower than v19, these commands still work.*
 
 ![Updating the app](https://raw.githubusercontent.com/marius-wieschollek/passwords-legacy/stable/img/versionchecker.png)
-
-### Initial installation
-Use one of the following options, login as admin on NextCloud and enable the app. The database tables `oc_passwords`, `oc_passwords_categories` and `oc_passwords_share` will be created automatically (assuming `_oc` as prefix).
-* **Git clone (fastest)** 
- * Use these commands (assuming `/var/www/nextcloud` as your ownCloud/NextCloud root location). The first one is optional to remove an existing folder with contents.
- ```
-rm -rf /var/www/owncloud/apps/passwords
-git clone --branch stable https://github.com/marius-wieschollek/passwords-legacy.git /var/www/nextcloud/apps/passwords
-```
-* **Manual download and installation** 
- * [Click here to view the latest official release](https://github.com/marius-wieschollek/passwords-legacy/releases/latest) or, for the very last master version, [click here to download the zip](https://github.com/marius-wieschollek/passwords-legacy/archive/stable.zip) or [here to download the tar.gz](https://github.com/marius-wieschollek/passwords-legacy/archive/stable.tar.gz).
- * Copy, unzip or untar the folder 'passwords' to /nextcloud/apps/ (**remember that the folder must be called 'passwords'**).
-
-* Installation from NextCloud AppStore
- * Comes as soon as i manage to integrate it
 
 ## Credits
 A big thanks to all participants in this project.

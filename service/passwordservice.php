@@ -137,6 +137,18 @@ class PasswordService {
 		}
 	}
 
+    /**
+     * @param $website
+     * @param $pass
+     * @param $loginname
+     * @param $address
+     * @param $notes
+     * @param $category
+     * @param $deleted
+     * @param $userId
+     *
+     * @return \OCP\AppFramework\Db\Entity|Password
+     */
 	public function create($website, $pass, $loginname, $address, $notes, $category, $deleted, $userId) {
         $website = strip_tags($website);
         $loginname = strip_tags($loginname);

@@ -21,6 +21,10 @@
 	margin : 0;
 }
 
+.passwords-legacy {
+	padding: 15px !important;
+}
+
 .ui-icon-notice {
 	background-image    : url('../../../core/img/actions/info.svg') !important;
 	background-position : 0px !important;
@@ -285,6 +289,7 @@ tr.activerow {
 #PasswordsTable,
 #ShareUsersTable {
 	display : none;
+	background: white;
 }
 
 .btn_commands_inline,

@@ -11,6 +11,8 @@ $app_path = OC::$server->getConfig()->getAppValue('passwords', 'app_path', OC::$
 	</div>
 	<h2><?php p($l->t('Passwords')); ?></h2>
 
+    <?=$this->inc('part.upgrade') ?>
+
 	<div>
 		<h3><?php p($l->t('Version')); ?></h3>
 

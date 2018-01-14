@@ -15,8 +15,8 @@
 	</description>
 	<licence>AGPL</licence>
 	<author mail="nc.passwords@mdns.eu" homepage="https://github.com/marius-wieschollek/passwords-legacy">Marius David Wieschollek</author>
-	<version>2017.11</version>
-	<apiVersion>20-beta9</apiVersion>
+	<version>2017.12</version>
+	<apiVersion>21</apiVersion>
 	<namespace>Passwords</namespace>
 	<category>tools</category>
 	<bugs>https://github.com/marius-wieschollek/passwords-legacy/issues</bugs>
