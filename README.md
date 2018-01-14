@@ -1,5 +1,5 @@
 # Passwords
-**by Marius Wieschollek, original app by Fallon Turner**
+**maintained by Marius Wieschollek, original app by Fallon Turner**
 A simple password storage for Nextcloud 12
 
 > This app is no longer supported.
