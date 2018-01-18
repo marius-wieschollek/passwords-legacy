@@ -1,3 +1,7 @@
+#### 2017.12
+* Added API v21 Support
+* EOL release
+
 #### 2017.11
 * **SECURITY** Fixed Encrypted data leak in API
 
