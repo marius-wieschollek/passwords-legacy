@@ -7,6 +7,7 @@ $https
       || substr(\OC::$server->getConfig()->getSystemValue('overwrite.cli.url', 'http:'), 0, 5) == 'https'
       || \OC::$server->getConfig()->getAppValue('passwords', 'https_check', 'true') == 'false';
 
+$version = \OC::$server->getConfig()->getSystemValue('version');
 ?>
 <div class="passwords-legacy" style="background: #E85752; border: 1px solid #E20800; margin: -5px;padding: 5px; color: #323232;line-height: initial;">
     <b style="font-size: large">IMPORTANT: PASSWORDS LEGACY END OF LIFE ANNOUNCEMENT</b><br>
@@ -38,8 +39,8 @@ $https
         </tr>
         <tr style="height: auto !important;">
             <td>Nextcloud</td>
-            <td style="text-align: right"><?=$_SERVER['NEXTCLOUD_VERSION']?></td>
-            <td style="text-align: right">12.0.0</td>
+            <td style="text-align: right"><?=$version?></td>
+            <td style="text-align: right">12.0.0.0</td>
         </tr>
         <tr style="height: auto !important;">
             <td>HTTPS</td>
