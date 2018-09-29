@@ -35,7 +35,6 @@ An [Android App](https://play.google.com/store/apps/details?id=com.intirix.cloud
 * openssl
 
 ## Installation
-### Updating
 You can upgrade to the new app using the [Nextcloud App store](https://apps.nextcloud.com/apps/passwords). Read the [migration guide](https://git.mdns.eu/nextcloud/passwords/wikis/Administrators/Legacy-Migration) to keep your passwords.
 
 ## Credits
