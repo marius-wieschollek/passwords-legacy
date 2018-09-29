@@ -1,9 +1,8 @@
-# Passwords
-**maintained by Marius Wieschollek, original app by Fallon Turner**
-A simple password storage for Nextcloud 12
+# Passwords Legacy App
+**Originally by Fallon Turner, ported to Nextcloud 12 by Marius Wieschollek**
 
-> This app is no longer supported.
-> If you are looking for a safe and simple password manager, please use the [new app](https://github.com/marius-wieschollek/passwords).
+> **This app is insecure and no longer supported.
+> If you are looking for a safe, simple and modern password manager, check out our [new app](https://apps.nextcloud.com/apps/passwords) and the [migration guide](https://git.mdns.eu/nextcloud/passwords/wikis/Administrators/Legacy-Migration).**
 
 ## Contents
 *  [Summary](#summary)
@@ -25,22 +24,19 @@ Every password is encrypted with it's own key.
 ## API and Third Party Apps
 This app allows full remote control by using a RESTful API.
 
-Browser plugins are available for [Firefox](https://addons.mozilla.org/de/firefox/addon/nextcloud-passwords/) and for [Chromium](https://github.com/marius-wieschollek/passwords-webextension/wiki/chromium-builds).
+Please be aware that this app only supports the legacy api and the programs listed below will stop working with this app in the future. 
+Browser extensions are available for [Firefox](https://addons.mozilla.org/de/firefox/addon/nextcloud-passwords/) and for [Chrome](https://chrome.google.com/webstore/detail/nextcloud-passwords/mhajlicjhgoofheldnmollgbgjheenbi). 
 An [Android App](https://play.google.com/store/apps/details?id=com.intirix.cloudpasswordmanager) is available as well.
 
 ## Requirements
 * Nextcloud 12 (works with 11, but not supported)
-* PHP 5.6 (Upgrade to PHP 7.0 for future releases)
+* PHP 5.6 (Upgrade to PHP 7.1 for future releases)
 * mcrypt
 * openssl
 
 ## Installation
-### Updating from previous version
-Login as admin on NextCloud and **go to the passwords section** on the **admin page**. It will notify you whether there's an update, or you're already up to date. When there's an update, buttons will appear to download the latest version and all command lines with adapted file owner names (`www-data` in below example) and right app location (`/var/www/owncloud_prod/apps/passwords` in below example) to run the update very fast on your CLI.
-
-*Note: on versions lower than v19, these commands still work.*
-
-![Updating the app](https://raw.githubusercontent.com/marius-wieschollek/passwords-legacy/stable/img/versionchecker.png)
+### Updating
+You can upgrade to the new app using the [Nextcloud App store](https://apps.nextcloud.com/apps/passwords). Read the [migration guide](https://git.mdns.eu/nextcloud/passwords/wikis/Administrators/Legacy-Migration) to keep your passwords.
 
 ## Credits
-A big thanks to all participants in this project.
+A big thanks to all who made this app happen and hopefully we meet again in the [new app](https://apps.nextcloud.com/apps/passwords).
